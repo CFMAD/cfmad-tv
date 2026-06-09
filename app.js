@@ -107,11 +107,6 @@ ligne.innerHTML = `
 </div>
 `;
 
-<div class="planning-formateur">
-    👤 ${item.formateur}
-</div>
-`;
-
                 planning.appendChild(ligne);
             });
 
