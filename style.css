@@ -311,25 +311,26 @@ footer{
 }
 
 
-.planning-card{
+.planning-card {
 
     background:#f4f6f8;
 
     border-radius:12px;
 
-    padding:14px 16px;
+    padding:12px 14px;
 
     margin-bottom:10px;
 
-    min-height:auto;
+    min-height:90px;
 
     display:flex;
-    flex-direction:column;
-    justify-content:center;
 
+    flex-direction:column;
+
+    justify-content:center;
 }
 
-.planning-top{
+.planning-header {
 
     display:flex;
 
@@ -338,10 +339,31 @@ footer{
     align-items:center;
 
     margin-bottom:8px;
-
 }
 
-.planning-heure{
+.planning-time {
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#003d56;
+}
+
+.planning-room {
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+}
+
+.planning-title {
 
     font-size:22px;
 
@@ -349,40 +371,14 @@ footer{
 
     color:#003d56;
 
-}
-
-.planning-salle{
-
-    color:white;
-
-    padding:5px 12px;
-
-    border-radius:20px;
-
-    font-size:14px;
-
-    font-weight:700;
-
-}
-
-.planning-formation{
-
-    font-size:24px;
-
-    font-weight:700;
-
     text-transform:uppercase;
 
-    color:#002f45;
-
-    margin-bottom:8px;
-
+    margin-bottom:4px;
 }
 
-.planning-formateur{
+.planning-trainer {
 
-    font-size:16px;
+    font-size:15px;
 
-    color:#555;
-
+    color:#666;
 }
