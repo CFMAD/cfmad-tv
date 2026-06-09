@@ -309,3 +309,80 @@ footer{
 #bandeau{
     width:100%;
 }
+
+
+.planning-card{
+
+    background:#f4f6f8;
+
+    border-radius:12px;
+
+    padding:14px 16px;
+
+    margin-bottom:10px;
+
+    min-height:auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+.planning-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:8px;
+
+}
+
+.planning-heure{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#003d56;
+
+}
+
+.planning-salle{
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.planning-formation{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    color:#002f45;
+
+    margin-bottom:8px;
+
+}
+
+.planning-formateur{
+
+    font-size:16px;
+
+    color:#555;
+
+}
