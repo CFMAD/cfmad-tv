@@ -1,63 +1,82 @@
-function updateClock(){
- const now = new Date();
- document.getElementById('clock').innerText =
-    now.toLocaleString('fr-FR');
-}
+const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnRGMvStHydQqQDf08CHVrd4C0w-lUgsqFeyzc098_TSbfDoVM2CA6WjyC29yNDumWEDz6bhQnMPdD09I_tNyWgRAnfNwBCEkVmkTfjdIT60-mtj7yd_gDxBqHljHk2Gxrz0SOty325oXFFrlv6O81M1ULi0w6-dQodUVajq-4uX-Zs8eU5MC0d07lCywK_Bh_v7V72AZKo4Egei1-YHYR3JfPNIEs0OCLoAeSPQz3ULRkRtdubX9P6tQsmkXS1Kl-Xt1Cqj2vwGQlfhEzg7M_U5Wnr18Q&lib=M5k8RhdxgLMqvnc5xtfdZ_hrz-EcdL9gh";
 
-setInterval(updateClock,1000);
-updateClock();
+async function chargerDonnees() {
 
-const API_URL =
-'https://script.google.com/macros/s/AKfycbzoSPWRJw0C23NtO1U-EvONul-meqZKeEkA0x0rg1FPiNFlsiFFDsttq9QsXYl_cN732Q/exec';
+    try {
 
-async function loadData(){
+        const response = await fetch(API_URL);
+        const data = await response.json();
 
- try{
+        // SLOGAN
+        document.getElementById("slogan").textContent =
+            data.slogan || "";
 
-   const response = await fetch(API_URL);
-   const data = await response.json();
+        // URGENT
+        document.getElementById("urgent").textContent =
+            data.urgent || "";
 
-   let html =
-   '<tr><th>Horaire</th><th>Formation</th><th>Salle</th><th>Formateur</th></tr>';
+        // CITATION
+        document.getElementById("citation").textContent =
+            data.citation || "";
 
-   data.planning.forEach(item => {
+        // FACEBOOK
+        document.getElementById("facebook-link").innerHTML =
+            data.facebook
+                ? `<a href="${data.facebook}" target="_blank">${data.facebook}</a>`
+                : "";
 
-      html += `
-      <tr>
-        <td>${item.horaire}</td>
-        <td>${item.formation}</td>
-        <td>${item.salle}</td>
-        <td>${item.formateur}</td>
-      </tr>`;
-   });
+        // PLANNING
+        afficherPlanning(data.planning || []);
 
-   document.getElementById('planning').innerHTML = html;
+    } catch (erreur) {
 
-   document.getElementById('messages').innerHTML =
-      data.messages.join('<br><br>');
+        console.error(erreur);
 
-   document.getElementById('quote').innerText =
-      data.citation;
+        document.getElementById("planning").innerHTML =
+            "Erreur de chargement";
 
-   document.getElementById('ticker').innerText =
-      data.bandeau;
-
-   if(data.urgent){
-
-      document.getElementById('urgent').innerHTML =
-      `<div class="urgent">
-        ⚠ ${data.urgent}
-      </div>`;
-   }
-
- }catch(error){
-
-   console.error(error);
-
- }
+    }
 
 }
 
-loadData();
+function afficherPlanning(planning) {
 
-setInterval(loadData,300000);
+    const container = document.getElementById("planning");
+
+    container.innerHTML = "";
+
+    planning.forEach(item => {
+
+        const ligne = document.createElement("div");
+
+        ligne.innerHTML = `
+            <strong>${item.debut} - ${item.fin}</strong><br>
+            ${item.formation}<br>
+            ${item.salle}<br>
+            ${item.formateur}
+            <hr>
+        `;
+
+        container.appendChild(ligne);
+
+    });
+
+}
+
+function mettreAJourHorloge() {
+
+    const maintenant = new Date();
+
+    document.getElementById("heure").textContent =
+        maintenant.toLocaleTimeString("fr-FR");
+
+    document.getElementById("date").textContent =
+        maintenant.toLocaleDateString("fr-FR");
+
+}
+
+chargerDonnees();
+
+mettreAJourHorloge();
+
+setInterval(mettreAJourHorloge, 1000);
