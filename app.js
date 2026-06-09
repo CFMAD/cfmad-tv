@@ -49,7 +49,42 @@ async function chargerDonnees() {
 
                 const ligne = document.createElement("div");
 
-                ligne.innerHTML = `
+let couleur = "#4ea72e";
+
+switch(item.salle){
+
+case "Salle de cours":
+couleur = "#4ea72e";
+break;
+
+case "Salle Solidarité":
+couleur = "#ff33cc";
+break;
+
+case "Cuisine":
+couleur = "#ff0000";
+break;
+
+case "Salle Hygiène":
+couleur = "#ffff00";
+break;
+
+case "Salle Manutention":
+couleur = "#38c3f3";
+break;
+
+case "Salle des profs":
+couleur = "#aeaeae";
+break;
+
+}
+
+ligne.className = "planning-card";
+
+ligne.style.borderLeft =
+`12px solid ${couleur}`;
+
+ligne.innerHTML = `
                     <strong>${item.debut} - ${item.fin}</strong><br>
                     ${item.formation}<br>
                     ${item.salle}<br>
