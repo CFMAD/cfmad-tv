@@ -106,7 +106,7 @@ ligne.innerHTML = `
 
 </div>
 `;
-
+                
                 planning.appendChild(ligne);
             });
 
