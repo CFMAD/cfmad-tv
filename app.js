@@ -91,10 +91,9 @@ ligne.innerHTML = `
         ${item.debut} - ${item.fin}
     </span>
 
-    <span class="planning-room"
-          style="background:${couleur}">
-        ${item.salle}
-    </span>
+    <span class="planning-room">
+      ${item.salle}
+</span>
 
 </div>
 
