@@ -352,15 +352,11 @@ footer{
 
 .planning-room {
 
-    color:white;
+    color:#666;
 
-    font-size:12px;
+    font-size:14px;
 
-    font-weight:700;
-
-    padding:4px 10px;
-
-    border-radius:20px;
+    font-weight:600;
 }
 
 .planning-title {
