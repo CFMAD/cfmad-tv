@@ -382,3 +382,12 @@ footer{
 
     color:#666;
 }
+#planning {
+
+    scrollbar-width:none;
+}
+
+#planning::-webkit-scrollbar {
+
+    display:none;
+}
