@@ -85,11 +85,27 @@ ligne.style.borderLeft =
 `12px solid ${couleur}`;
 
 ligne.innerHTML = `
-                    <strong>${item.debut} - ${item.fin}</strong><br>
-                    ${item.formation}<br>
-                    ${item.salle}<br>
-                    ${item.formateur}
-                `;
+<div class="planning-top">
+
+    <div class="planning-heure">
+        ${item.debut} → ${item.fin}
+    </div>
+
+    <div class="planning-salle"
+         style="background:${couleur}">
+        ${item.salle}
+    </div>
+
+</div>
+
+<div class="planning-formation">
+    ${item.formation}
+</div>
+
+<div class="planning-formateur">
+    👤 ${item.formateur}
+</div>
+`;
 
                 planning.appendChild(ligne);
             });
