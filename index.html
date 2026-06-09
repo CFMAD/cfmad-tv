@@ -2,120 +2,147 @@
 <html lang="fr">
 
 <head>
-<meta charset="utf-!">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFMAD TV</title>
 
-<title>CFMAD</title>
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
-
-<style>
-
-
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-background:#083847;
-}
-
-.logo{
-font-size:40px;
-font-weight:bold;
-}
-
-.content{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:20px;
-padding:20px;
-}
-
-.card{
-background:#0F5F76;
-border-radius:12px;
-padding:15px;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-th,td{
-padding:10px;
-border-bottom:1px solid #43D7D0;
-}
-
-.urgent{
-background:#D89A2B;
-color:black;
-padding:15px;
-font-size:24px;
-font-weight:bold;
-}
-
-.footer{
-position:fixed;
-bottom:0;
-width:100%;
-background:#083847;
-padding:12px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="header">
+<!-- HEADER -->
 
-<div class="logo">
-CFMAD
-</div>
+<header>
 
-<div id="clock"></div>
+    <div class="header-left">
 
-</div>
+        <img src="logo.png" alt="CFMAD" id="logo">
 
-<div id="urgent"></div>
+        <div class="centre">
 
-<div class="content">
+            <div class="nom-centre">
+                Centre de Formation des Métiers de l'Aide à Domicile
+            </div>
 
-<div class="card">
+            <div id="slogan">
+                Chargement...
+            </div>
 
-<h2>Planning du jour</h2>
+        </div>
 
-<table id="planning"></table>
+    </div>
 
-</div>
+    <div class="header-right">
 
-<div>
+        <div id="heure">00:00</div>
 
-<div class="card">
+        <div id="date">
+            Chargement...
+        </div>
 
-<h2>Messages</h2>
+    </div>
 
-<div id="messages"></div>
+</header>
 
-</div>
+<!-- CONTENU PRINCIPAL -->
 
-<br>
+<main>
 
-<div class="card">
+    <!-- PLANNING -->
 
-<h2>Citation du jour</h2>
+    <section id="planning-section">
 
-<div id="quote"></div>
+        <h2>Planning du jour</h2>
 
-</div>
+        <div id="planning">
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-<div class="footer" id="ticker"></div>
+    <!-- PHOTO -->
+
+    <section id="photo-section">
+
+        <div id="photo-container">
+
+            <img id="photo-principale" src="" alt="Photo">
+
+            <div id="photo-overlay">
+
+                <div id="photo-message">
+                    Bienvenue au CFMAD
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COLONNE DROITE -->
+
+    <section id="right-column">
+
+        <div id="urgent-card">
+
+            <h3>Information importante</h3>
+
+            <div id="urgent">
+                Aucun message
+            </div>
+
+        </div>
+
+        <div id="citation-card">
+
+            <h3>Citation du jour</h3>
+
+            <div id="citation">
+                Chargement...
+            </div>
+
+        </div>
+
+        <div id="facebook-card">
+
+            <h3>Facebook</h3>
+
+            <div id="facebook-link">
+
+            </div>
+
+            <div id="qrcode">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- VITRINE -->
+
+<section id="vitrine-section">
+
+    <div id="vitrine">
+
+    </div>
+
+</section>
+
+<!-- BANDEAU BAS -->
+
+<footer>
+
+    <div id="bandeau">
+
+    </div>
+
+</footer>
 
 <script src="app.js"></script>
 
