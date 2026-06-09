@@ -79,6 +79,21 @@ header{
     font-size:20px;
 }
 
+
+         .planning-card{
+             background:#f4f6f8;
+             border-radius:12px;
+             padding:15px;
+             margin-bottom:12px;
+             box-shadow:0 2px 8px rgba(0,0,0,0.08);
+             transition:all .3s ease;
+         }
+         
+         .planning-card:hover{
+             transform:translateX(4px);
+         }
+
+
 /* =========================
    MAIN
 ========================= */
