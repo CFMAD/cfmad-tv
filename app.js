@@ -85,25 +85,10 @@ ligne.style.borderLeft =
 `12px solid ${couleur}`;
 
 ligne.innerHTML = `
-<div class="planning-header">
-
-    <span class="planning-time">
-        ${item.debut} - ${item.fin}
-    </span>
-
-    <span class="planning-room">
-      ${item.salle}
-</span>
-
-</div>
-
-<div class="planning-title">
-    ${item.formation}
-</div>
-
-<div class="planning-trainer">
-    👤 ${item.formateur}
-</div>
+<strong>${item.debut} - ${item.fin}</strong><br>
+${item.formation}<br>
+${item.salle}<br>
+${item.formateur}
 `;
               
                 
