@@ -41,7 +41,18 @@ async function chargerDonnees() {
 
         // planning
         const planning = document.getElementById("planning");
-        planning.innerHTML = "";
+        
+        planning.innerHTML = `
+<div id="planning-header">
+
+    <span>Horaire</span>
+    <span>Classe</span>
+    <span>Formation</span>
+    <span>Salle</span>
+    <span>Formateur</span>
+
+</div>
+`;
 
         if (Array.isArray(data.planning)) {
 
