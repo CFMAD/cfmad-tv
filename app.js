@@ -53,7 +53,7 @@ async function chargerDonnees() {
 
 </div>
 `;
-
+console.log(planning.innerHTML);
         if (Array.isArray(data.planning)) {
 
             data.planning.forEach(item => {
