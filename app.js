@@ -85,10 +85,11 @@ ligne.style.borderLeft =
 `12px solid ${couleur}`;
 
 ligne.innerHTML = `
-<strong>${item.debut} - ${item.fin}</strong><br>
-${item.formation}<br>
-${item.salle}<br>
-${item.formateur}
+<span class="col-horaire">${item.debut} - ${item.fin}</span>
+<span class="col-classe">${item.classe}</span>
+<span class="col-formation">${item.formation}</span>
+<span class="col-salle">${item.salle}</span>
+<span class="col-formateur">${item.formateur}</span>
 `;
               
                 
