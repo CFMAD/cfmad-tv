@@ -153,7 +153,7 @@ section h3{
     display:grid;
 
     grid-template-columns:
-        120px
+        130px
         90px
         1fr
         140px
@@ -355,8 +355,20 @@ footer{
 
 
 .col-horaire{
+
+    display:inline-block;
+
+    color:white;
+
     font-weight:700;
-    color:#003A63;
+
+    text-align:center;
+
+    padding:6px 10px;
+
+    border-radius:8px;
+
+    min-width:105px;
 }
 
 .col-classe{
