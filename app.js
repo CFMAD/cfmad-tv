@@ -81,11 +81,11 @@ break;
 
 ligne.className = "planning-card";
 
-ligne.style.borderLeft =
-`12px solid ${couleur}`;
-
 ligne.innerHTML = `
-<span class="col-horaire">${item.debut} - ${item.fin}</span>
+<span class="col-horaire"
+      style="background:${couleur}">
+      ${item.debut} - ${item.fin}
+</span>
 <span class="col-classe">${item.classe}</span>
 <span class="col-formation">${item.formation}</span>
 <span class="col-salle">${item.salle}</span>
