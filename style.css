@@ -149,17 +149,31 @@ section h3{
 }
 
 #planning div{
-    background:#F5F8FA;
 
-    border-left:8px solid #4CAF50;
+    display:grid;
+
+    grid-template-columns:
+        120px
+        90px
+        1fr
+        140px
+        140px;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#F5F8FA;
 
     border-radius:10px;
 
-    padding:12px;
+    padding:8px 12px;
 
-    margin-bottom:10px;
+    margin-bottom:6px;
 
-    line-height:1.5;
+    min-height:48px;
+
+    font-size:15px;
 }
 
 /* =========================
@@ -337,4 +351,28 @@ footer{
 #planning::-webkit-scrollbar {
 
     display:none;
+}
+
+
+.col-horaire{
+    font-weight:700;
+    color:#003A63;
+}
+
+.col-classe{
+    font-weight:700;
+    color:#555;
+}
+
+.col-formation{
+    font-weight:700;
+}
+
+.col-salle{
+    font-size:14px;
+}
+
+.col-formateur{
+    font-size:14px;
+    color:#666;
 }
