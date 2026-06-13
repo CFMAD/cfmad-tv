@@ -104,9 +104,7 @@ main{
     grid-template-columns: 36% 34% 30%;
 box-sizing: border-box;
     gap:20px;
-
     padding:20px;
-
     height:calc(100vh - 260px);
 }
 
