@@ -101,7 +101,7 @@ header{
 main{
     display:grid;
 
-    grid-template-columns: 55% 25% 20%;
+    grid-template-columns: 48% 32% 20%;
 
     gap:20px;
 
