@@ -1,20 +1,25 @@
 /* =========================
-   CFMAD TV - PREMIUM V1
+   CFMAD TV - PREMIUM V1 (CLEAN)
 ========================= */
 
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+/* =========================
+   BODY
+========================= */
+
 body{
     font-family: Segoe UI, Arial, sans-serif;
     background:#E9EEF2;
     color:#17374D;
     height:100vh;
+    min-height:100vh;
     overflow:hidden;
-   min-height:100vh;
 }
 
 /* =========================
@@ -36,10 +41,8 @@ header{
 #logo{
     width:80px;
     height:80px;
-
     background:white;
     color:#0D4A5B;
-
     border-radius:15px;
 
     display:flex;
@@ -80,47 +83,30 @@ header{
     font-size:20px;
 }
 
-
-         .planning-card{
-             background:#f4f6f8;
-             border-radius:12px;
-             padding:15px;
-             margin-bottom:12px;
-             box-shadow:0 2px 8px rgba(0,0,0,0.08);
-             transition:all .3s ease;
-         }
-         
-         .planning-card:hover{
-             transform:translateX(4px);
-         }
-
-
 /* =========================
-   MAIN
+   MAIN LAYOUT
 ========================= */
 
 main{
     display:grid;
-   overflow-x: hidden;
-    grid-template-columns: 36% 34% 30%;
-box-sizing: border-box;
+    grid-template-columns:36% 34% 30%;
     gap:20px;
     padding:20px;
-min-height: calc(100vh - 180px);
-height: auto;
+
+    min-height:calc(100vh - 180px);
+    height:auto;
+
+    overflow-x:hidden;
 }
 
 /* =========================
-   CARDS
+   SECTIONS GENERALES
 ========================= */
 
 section{
     background:white;
-
     border-radius:18px;
-
     box-shadow:0 4px 15px rgba(0,0,0,0.10);
-
     overflow:hidden;
 }
 
@@ -145,250 +131,43 @@ section h3{
 #planning{
     padding:15px;
     overflow:auto;
+
+    scrollbar-width:none;
+}
+
+#planning::-webkit-scrollbar{
+    display:none;
+}
+
+#planning-header{
+    display:grid;
+    grid-template-columns:130px 90px 1fr 140px 140px;
+    gap:10px;
+
+    padding:8px 12px;
+    font-weight:700;
+    color:#003A63;
+
+    border-bottom:2px solid #d9e3ea;
+    margin-bottom:8px;
 }
 
 #planning .planning-card{
-
     display:grid;
-
-    grid-template-columns:
-        130px
-        90px
-        1fr
-        140px
-        140px;
-
+    grid-template-columns:130px 90px 1fr 140px 140px;
     align-items:center;
 
     gap:10px;
 
     background:#F5F8FA;
-
     border-radius:10px;
 
     padding:8px 12px;
-
     margin-bottom:6px;
 
     min-height:48px;
-
     font-size:15px;
 }
-
-#planning-header{
-
-    display:grid;
-
-    grid-template-columns:
-        130px
-        90px
-        1fr
-        140px
-        140px;
-
-    gap:10px;
-
-    padding:8px 12px;
-
-    font-weight:700;
-
-    color:#003A63;
-
-    border-bottom:2px solid #d9e3ea;
-
-    margin-bottom:8px;
-}
-
-/* =========================
-   PHOTO
-========================= */
-
-#photo-section{
-    position:relative;
-    overflow:hidden;
-    border-radius:20px;
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.18);
-}
-
-#photo-container{
-    height:100%;
-}
-
-#photo-principale{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:transform 8s ease;
-}
-
-#photo-overlay{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    padding:20px;
-    background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0)
-    );
-
-    color:white;
-}
-
-#photo-message{
-    font-size:28px;
-    font-weight:700;
-    text-shadow:
-        0 2px 6px rgba(0,0,0,0.4);
-}
-
-#photo-section:hover #photo-principale{
-    transform:scale(1.05);
-}
-
-/* =========================
-   COLONNE DROITE
-========================= */
-
-#right-column{
-
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    height:100%;
-    padding-right:15px;
-}
-
-#urgent-card,
-#citation-card,
-#facebook-card{
-    flex:1;
-    min-height:0;
-    border-radius:20px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.12);
-}
-
-#urgent-card,
-#citation-card,
-#facebook-card{
-
-    background:white;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.10);
-    overflow:hidden;
-}
-
-#urgent{
-    padding:14px;
-    font-size:16px;
-}
-
-#citation{
-    padding:14px;
-    font-size:15px;
-    font-style:italic;
-    line-height:1.4;
-}
-
-#facebook-link{
-    padding:14px;
-    font-size:14px;
-    word-break:break-word;
-}
-
-
-#urgent-card{
-    background:#E61E25;
-    color:white;
-}
-
-#urgent-card h3{
-
-    background:transparent;
-    color:white;
-    text-align:center;
-    font-size:22px;
-    font-weight:700;
-    padding-top:20px;
-    padding-bottom:10px;
-}
-
-#urgent{
-
-    color:white;
-    text-align:center;
-    font-size:18px;
-    line-height:1.4;
-}
-
-
-/* =========================
-   VITRINE
-========================= */
-
-#vitrine-section{
-
-    margin:0 20px;
-
-    height:90px;
-}
-
-#vitrine{
-    display:flex;
-
-    height:100%;
-}
-
-#vitrine div{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-right:1px solid #DDD;
-}
-
-#vitrine div:last-child{
-    border-right:none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    height:70px;
-
-    background:#7AA73D;
-
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:0 25px;
-
-    font-size:24px;
-
-    font-weight:600;
-}
-
-#bandeau{
-    width:100%;
-}
-
-
 
 .planning-card{
     background:#f4f6f8;
@@ -403,35 +182,14 @@ footer{
     transform:translateX(4px);
 }
 
-
-
-
-
-#planning {
-
-    scrollbar-width:none;
-}
-
-#planning::-webkit-scrollbar {
-
-    display:none;
-}
-
-
+/* colonnes planning */
 .col-horaire{
-
     display:inline-block;
-
     color:white;
-
     font-weight:700;
-
     text-align:center;
-
     padding:6px 10px;
-
     border-radius:8px;
-
     min-width:105px;
 }
 
@@ -453,50 +211,115 @@ footer{
     color:#666;
 }
 
-#citation-card{
+/* =========================
+   PHOTO
+========================= */
 
-    background:white;
+#photo-section{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.18);
 }
 
-#citation-card h3{
+#photo-container{
+    height:100%;
+}
 
-    background:transparent;
-    color:#7FB21A;
-    font-size:22px;
+#photo-principale{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 8s ease;
+}
+
+#photo-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:20px;
+
+    background:linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+
+    color:white;
+}
+
+#photo-message{
+    font-size:28px;
     font-weight:700;
-    padding:18px 20px 8px 20px;
+    text-shadow:0 2px 6px rgba(0,0,0,0.4);
 }
 
-#citation{
-
-    color:#333;
-    font-size:20px;
-    line-height:1.6;
-    font-style:italic;
-    padding:0 20px 20px 20px;
+#photo-section:hover #photo-principale{
+    transform:scale(1.05);
 }
 
-#citation-card{
+/* =========================
+   COLONNE DROITE
+========================= */
 
-    background:white;
+#right-column{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    height:100%;
+    padding-right:15px;
+}
+
+/* cards communes */
+#urgent-card,
+#citation-card,
+#facebook-card{
+    flex:1;
+    min-height:0;
     border-radius:18px;
     box-shadow:0 4px 15px rgba(0,0,0,0.10);
-    padding:0;
     overflow:hidden;
+    background:white;
 }
 
-#citation-card h3{
+/* =========================
+   URGENT
+========================= */
 
-    background:white !important;
-    color:#7FB21A !important;
+#urgent-card{
+    background:#E61E25;
+    color:white;
+}
+
+#urgent-card h3{
+    background:transparent;
+    color:white;
     text-align:center;
     font-size:22px;
     font-weight:700;
-    padding:18px 0 10px 0;
+    padding:20px 0 10px;
+}
+
+#urgent{
+    padding:14px;
+    font-size:18px;
+    line-height:1.4;
+    text-align:center;
+    color:white;
+}
+
+/* =========================
+   CITATION
+========================= */
+
+#citation-card h3{
+    background:white;
+    color:#7FB21A;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    padding:18px 0 10px;
 }
 
 #citation{
-
     padding:20px;
     text-align:center;
     color:#333;
@@ -505,17 +328,16 @@ footer{
     font-style:italic;
 }
 
-#facebook-card{
+/* =========================
+   FACEBOOK
+========================= */
 
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
+#facebook-card{
     display:flex;
     flex-direction:column;
 }
 
 #facebook-card h3{
-
     background:#1877F2;
     color:white;
     text-align:center;
@@ -524,7 +346,6 @@ footer{
 }
 
 #facebook-link{
-
     flex:1;
     display:flex;
     justify-content:center;
@@ -534,9 +355,57 @@ footer{
 }
 
 #facebook-link a{
-
     color:#1877F2;
     font-weight:700;
     text-decoration:none;
     word-break:break-word;
+}
+
+/* =========================
+   VITRINE
+========================= */
+
+#vitrine-section{
+    margin:0 20px;
+    height:90px;
+}
+
+#vitrine{
+    display:flex;
+    height:100%;
+}
+
+#vitrine div{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-right:1px solid #DDD;
+}
+
+#vitrine div:last-child{
+    border-right:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    height:70px;
+    background:#7AA73D;
+    color:white;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 25px;
+
+    font-size:24px;
+    font-weight:600;
+}
+
+#bandeau{
+    width:100%;
 }
