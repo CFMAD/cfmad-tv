@@ -260,15 +260,15 @@ section h3{
 }
 
 #urgent-card{
-    flex:0 0 180px;
+    flex:1 1 auto;
 }
 
 #citation-card{
-    flex:0 0 180px;
+    flex:1 1 auto;
 }
 
 #facebook-card{
-    flex:0 0 160px;
+    flex:1 1 auto;
 }
 
 #urgent-card,
