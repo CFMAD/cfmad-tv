@@ -257,18 +257,14 @@ section h3{
     flex-direction:column;
     gap:18px;
     align-self:start;
+    max-height:100%;
 }
 
-#urgent-card{
-    flex:0 0 160px;
-}
-
-#citation-card{
-    flex:0 0 160px;
-}
-
+#urgent-card,
+#citation-card,
 #facebook-card{
-    flex:0 0 140px;
+    flex:1 1 0;
+    min-height:0;
 }
 
 #urgent-card,
