@@ -101,13 +101,11 @@ header{
 
 main{
     display:grid;
-   overflow-x: hidden;
-    grid-template-columns: 36% 34% 30%;
-box-sizing: border-box;
+    overflow-x:hidden;
+    grid-template-columns:36% 34% 30%;
     gap:20px;
     padding:20px;
-min-height: calc(100vh - 180px);
-height: auto;
+    height:calc(100vh - 180px);
 }
 
 /* =========================
