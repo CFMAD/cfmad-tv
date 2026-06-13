@@ -298,6 +298,33 @@ height:100%;
     word-break:break-word;
 }
 
+
+#urgent-card{
+    background:#E61E25;
+    color:white;
+}
+
+#urgent-card h3{
+
+    background:transparent;
+    color:white;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    padding-top:20px;
+    padding-bottom:10px;
+}
+
+#urgent{
+
+    color:white;
+    text-align:center;
+    font-size:18px;
+    line-height:1.4;
+}
+
+
+
 /* =========================
    VITRINE
 ========================= */
