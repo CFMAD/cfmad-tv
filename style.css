@@ -253,12 +253,10 @@ section h3{
 ========================= */
 
 #right-column{
-
     display:flex;
     flex-direction:column;
     gap:18px;
-    height:100%;
-    padding-right:15px;
+    align-self:start;
 }
 
 #urgent-card{
