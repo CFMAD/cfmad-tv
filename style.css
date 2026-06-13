@@ -541,7 +541,12 @@ footer{
     word-break:break-word;
 }
 
+
+
 #urgent-card{
     background: purple !important;
     height: 50px !important;
+}
+body{
+    background: hotpink !important;
 }
