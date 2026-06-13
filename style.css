@@ -101,13 +101,13 @@ header{
 main{
     display:grid;
 
-    grid-template-columns: 42% 33% 25%;
+    grid-template-columns: 38% 32% 30%;
 
     gap:20px;
 
     padding:20px;
 
-    height:calc(100vh - 220px);
+    height:calc(100vh - 250px);
 }
 
 /* =========================
