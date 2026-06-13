@@ -128,10 +128,9 @@ section h2,
 section h3{
     background:#0D4A5B;
     color:white;
-
-    padding:12px 18px;
-
-    font-size:20px;
+    padding:10px 16px;
+    font-size:18px;
+    font-weight:600;
 }
 
 /* =========================
@@ -282,18 +281,20 @@ height:100%;
 }
 
 #urgent{
-    padding:20px;
-    font-size:18px;
+    padding:14px;
+    font-size:16px;
 }
 
 #citation{
-    padding:20px;
+    padding:14px;
+    font-size:15px;
     font-style:italic;
-    line-height:1.5;
+    line-height:1.4;
 }
 
 #facebook-link{
-    padding:20px;
+    padding:14px;
+    font-size:14px;
     word-break:break-word;
 }
 
