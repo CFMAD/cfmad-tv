@@ -100,14 +100,14 @@ header{
 
 main{
     display:grid;
-
-    grid-template-columns: 38% 32% 30%;
-
+   overflow-x: hidden;
+    grid-template-columns: 36% 34% 30%;
+box-sizing: border-box;
     gap:20px;
 
     padding:20px;
 
-    height:calc(100vh - 250px);
+    height:calc(100vh - 300px);
 }
 
 /* =========================
