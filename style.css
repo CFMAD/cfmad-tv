@@ -14,6 +14,7 @@ body{
     color:#17374D;
     height:100vh;
     overflow:hidden;
+   min-height:100vh;
 }
 
 /* =========================
@@ -105,7 +106,8 @@ main{
 box-sizing: border-box;
     gap:20px;
     padding:20px;
-    height:calc(100vh - 260px);
+min-height: calc(100vh - 180px);
+height: auto;
 }
 
 /* =========================
