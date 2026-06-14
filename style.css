@@ -165,7 +165,7 @@ header{
 
 main{
     display:grid;
-    grid-template-columns:36% 34% 27%;
+    grid-template-columns:36% 34% 28%;
     gap:20px;
     padding:20px;
 
