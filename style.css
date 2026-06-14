@@ -90,7 +90,7 @@ header{
 }
 
 #logo{
-    display:none;
+    display:flex;
 }
 
 .header-left{
@@ -106,7 +106,7 @@ header{
 
 .nom-centre,
 #slogan{
-    display:none;
+    display:block;
 }
 
 /* #slogan{
