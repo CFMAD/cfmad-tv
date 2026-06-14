@@ -257,7 +257,7 @@ section h3{
     flex-direction:column;
     gap:18px;
     align-self:start;
-    max-height:100%;
+   /* max-height:100%;*/
 }
 
 #urgent-card{
