@@ -150,8 +150,9 @@ header{
 
 header{
     background-image:url("images/header-complet.png");
-    background-size:cover;
-    background-position:center;
+    /*background-size:cover;*/
+   background-size:108%;
+    background-position:45 px center;
 }
 
 
