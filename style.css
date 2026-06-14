@@ -101,7 +101,7 @@ header{
 
 main{
     display:grid;
-    grid-template-columns:36% 34% 30%;
+    grid-template-columns:36% 34% 28%;
     gap:20px;
     padding:20px;
 
@@ -257,6 +257,7 @@ section h3{
     flex-direction:column;
     gap:18px;
     align-self:start;
+    padding-bottom:15px;
    /* max-height:100%;*/
 }
 
@@ -267,7 +268,7 @@ section h3{
     flex:0 0 180px;
 }
 #facebook-card{
-    flex:0 0 160px;
+    flex:0 0 120px;
 }
 
 #urgent-card,
