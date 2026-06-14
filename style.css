@@ -260,11 +260,14 @@ section h3{
     max-height:100%;
 }
 
-#urgent-card,
-#citation-card,
+#urgent-card{
+    flex:0 0 180px;
+}
+#citation-card{
+    flex:0 0 180px;
+}
 #facebook-card{
-    flex:1 1 0;
-    min-height:0;
+    flex:0 0 160px;
 }
 
 #urgent-card,
