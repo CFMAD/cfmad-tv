@@ -23,109 +23,70 @@ body{
 
 header{
     height:110px;
-
     background:#0D4A5B;
-    background-size:70%;
-    background-position:35px center;
-    background-repeat:no-repeat;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
     padding:0 20px;
-    overflow:hidden;
-
     color:white;
 }
 
+/* LEFT */
 .header-left{
     display:flex;
     align-items:center;
     gap:15px;
-    margin-right:10px;
 }
 
 #logo img{
     height:85px;
     width:auto;
-    display:block;
+}
+
+/* bloc texte logo */
+.brand{
+    display:flex;
+    flex-direction:column;
 }
 
 .nom-centre{
     font-size:24px;
     font-weight:700;
+    line-height:1.1;
 }
 
 #slogan{
-    font-size:18px;
+    font-size:16px;
     font-style:italic;
     color:#FFD84D;
-    margin-top:5px;margin-right:100px;
+    margin:0; /* IMPORTANT */
 }
 
+/* RIGHT */
 .header-right{
     display:flex;
     align-items:center;
     gap:20px;
 }
 
-
-
-.date-wrapper{
-    text-align:left;
-}
-
-#jour{
-    font-size:18px;
-    color:white;
-}
-
-#logo{
-    display:flex;
-}
-
-
-
-/*.nom-centre{
-    font-size:28px;
-    font-weight:700;
-}*/
-
-.nom-centre,
-#slogan{
-    display:block;
-}
-
-/* #slogan{
-    margin-top:8px;
-    font-size:18px;
-    opacity:0.9;
-} */
-
-.header-right{
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    margin-right:10px;
-}
-
 #heure{
     font-size:42px;
     font-weight:700;
-    color:white;
 }
 
 .date-wrapper{
     text-align:left;
 }
-
 
 #date{
     color:#8BC34A;
     font-weight:700;
-    font-size:20px;
+}
+
+#jour{
+    font-size:18px;
 }
 
 
