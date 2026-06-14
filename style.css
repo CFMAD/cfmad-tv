@@ -22,15 +22,68 @@ body{
 ========================= */
 
 header{
-    background:#0D4A5B;
-    color:white;
     height:110px;
+    background:#0D4A5B;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 35px;
+    padding:0 25px;
+
+    color:white;
+
+    overflow:hidden;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+#logo img{
+    height:85px;
+    width:auto;
+    display:block;
+}
+
+.nom-centre{
+    font-size:24px;
+    font-weight:700;
+}
+
+#slogan{
+    font-size:18px;
+    font-style:italic;
+    color:#FFD84D;
+    margin-top:5px;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+#heure{
+    font-size:42px;
+    font-weight:700;
+}
+
+.date-wrapper{
+    text-align:left;
+}
+
+#jour{
+    font-size:18px;
+    color:white;
+}
+
+#date{
+    font-size:18px;
+    color:#7FB21A;
+    font-weight:700;
 }
 
 #logo{
@@ -79,6 +132,17 @@ header{
 #date{
     font-size:20px;
 }
+
+header{
+    background-image:url("images/header-complet.png");
+    background-size:cover;
+    background-position:center;
+}
+
+
+
+
+
 
 
          .planning-card{
