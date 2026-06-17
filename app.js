@@ -10,8 +10,8 @@ async function chargerDonnees() {
         console.log("DONNEES", data);
 
         // slogan
-        document.getElementById("slogan").textContent =
-            data.slogan || "";
+        // document.getElementById("slogan").textContent =
+           // data.slogan || "";
 
         // urgent
         document.getElementById("urgent").textContent =
