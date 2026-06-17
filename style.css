@@ -21,7 +21,7 @@ body{
    HEADER
 ========================= */
 
-header{
+/*header{
     height:110px;
     background:#013450;
 
@@ -31,7 +31,22 @@ header{
 
     padding:0 15px;
     overflow:hidden;
+}*/
+
+
+header{
+    height:110px;
+    background:
+        url("images/header-vagues.png") right center no-repeat,
+        #0D4A5B;
+    background-size: auto 110px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    overflow:hidden;
 }
+
 
 /* LEFT */
 .header-left{
