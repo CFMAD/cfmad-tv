@@ -37,9 +37,10 @@ body{
 header{
     height:110px;
     background:
-        url("vagues.png") right center no-repeat,
+        url("vagues.png") left center no-repeat,
         #013450;
     background-size: auto 200px;
+   background-position: 60% center;
     display:flex;
     justify-content:space-between;
     align-items:center;
