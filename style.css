@@ -37,7 +37,7 @@ body{
 header{
     height:110px;
     background:
-        url("images/header-vagues.png") right center no-repeat,
+        url("vagues.png") right center no-repeat,
         #0D4A5B;
     background-size: auto 110px;
     display:flex;
