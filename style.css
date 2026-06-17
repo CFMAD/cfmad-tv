@@ -61,10 +61,19 @@ header{
 }
 
 #slogan{
-    font-size:16px;
-    font-style:italic;
+    font-family:'Caveat', cursive;
+    line-height:0.9;
+}
+
+#slogan .blanc{
+    color:white;
+    font-size:26px;
+}
+
+#slogan .jaune{
     color:#FFD84D;
-    margin:0; /* IMPORTANT */
+    font-size:36px;
+    font-weight:700;
 }
 
 /* RIGHT */
