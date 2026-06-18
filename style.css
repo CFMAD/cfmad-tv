@@ -36,25 +36,29 @@ body{
 
 header{
     height:110px;
-    background:
-        url("vagues.png") left center no-repeat,
-        #013450;
-    background-size: auto 200px;
-   background-position: 60% center;
+    background:#013450;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:0 20px;
+    padding:0 15px;
     overflow:hidden;
 }
 
 
 /* LEFT */
 .header-left{
-    flex:1;
-   display:flex;
+    display:flex;
     align-items:center;
-    gap:15px;
+    gap:20px;
+    flex-shrink:0;
+}
+#header-deco{
+    flex:1;
+    height:110px;
+    background-image:url("points.png") center center no-repeat;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+    margin:0 20px;
 }
 
 #logo img{
@@ -96,7 +100,9 @@ header{
 .header-right{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:18px;
+    flex-shrink:0;
+    padding-right:10px;
 }
 
 #heure{
