@@ -38,8 +38,9 @@ header{
     height:110px;
     background:#013450;
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    padding:0 15px;
+    padding:0 20px;
     overflow:hidden;
 }
 
@@ -48,18 +49,9 @@ header{
 .header-left{
     display:flex;
     align-items:center;
-    gap:20px;
-    flex-shrink:0;
+    gap:25px;
 }
-#header-deco{
-    flex:1;
-    height:200px;
-    background-image:url("points.png");
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-size:120% auto;
-    margin:0 20px;
-}
+
 
 #logo img{
     height:300px;
@@ -81,8 +73,10 @@ header{
 }
 
 #slogan{
+    transform:rotate(-4deg);
+    line-height:0.95;
+    margin-left:10px;
     font-family:'Caveat', cursive;
-    line-height:0.9;
 }
 
 #slogan .blanc{
@@ -100,9 +94,12 @@ header{
 .header-right{
     display:flex;
     align-items:center;
-    gap:18px;
-    flex-shrink:0;
-    padding-right:10px;
+    gap:12px;
+}
+
+.clock-icon{
+    font-size:42px;
+    opacity:0.85;
 }
 
 #heure{
