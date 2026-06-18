@@ -33,6 +33,7 @@ async function chargerDonnees() {
                 `<a href="${data.facebook}" target="_blank">${data.facebook}</a>`;
         }
 
+        
         // bandeau bas
         if (Array.isArray(data.bandeau)) {
             document.getElementById("bandeau").textContent =
