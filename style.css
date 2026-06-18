@@ -73,10 +73,10 @@ header{
 }
 
 #slogan{
-    transform:rotate(-4deg);
-    line-height:0.95;
-    margin-left:10px;
     font-family:'Caveat', cursive;
+    line-height:0.9;
+    transform:rotate(-4deg);
+    margin-left:20px;
 }
 
 #slogan .blanc{
@@ -94,7 +94,7 @@ header{
 .header-right{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:20px;
 }
 
 .clock-icon{
