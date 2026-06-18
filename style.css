@@ -54,7 +54,7 @@ header{
 #header-deco{
     flex:1;
     height:110px;
-    background-image:url("points.png") center center no-repeat;
+    background-image:url("points.png");
     background-repeat:no-repeat;
     background-position:center center;
     background-size:contain;
