@@ -229,11 +229,11 @@ section h3{
     display:grid;
 
     grid-template-columns:
-        130px
-        90px
-        1fr
-        140px
-        140px;
+    120px
+    80px
+    1fr
+    150px
+    150px;
 
     gap:10px;
 
@@ -472,18 +472,14 @@ footer{
 .col-horaire{
 
     display:inline-block;
-
     color:white;
-
     font-weight:700;
-
     text-align:center;
-
     padding:6px 10px;
-
     border-radius:8px;
-
-    min-width:105px;
+    /*min-width:105px;*/
+    width:100%;
+    min-width:0;
 }
 
 .col-classe{
