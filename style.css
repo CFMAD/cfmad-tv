@@ -231,7 +231,10 @@ section h3{
     margin-bottom:8px;
     justify-items:start;
 }
-
+#planning-header span,
+.planning-card span{
+    justify-self:start;
+}
 /* =========================
    PHOTO
 ========================= */
@@ -475,6 +478,7 @@ footer{
     font-weight:700;
 }
 
+/* test
 .col-salle{
     font-size:14px;
 }
@@ -483,6 +487,15 @@ footer{
     font-size:14px;
     color:#666;
 }
+*/
+
+.col-salle,
+.col-formateur{
+    justify-self:start;
+    text-align:left;
+}
+
+
 
 #citation-card{
 
