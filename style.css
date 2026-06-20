@@ -246,6 +246,9 @@ section h3{
     border-bottom:2px solid #d9e3ea;
 
     margin-bottom:8px;
+   
+    justify-items:start;
+
 }
 
 /* =========================
