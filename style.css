@@ -215,7 +215,7 @@ section h3{
     font-size:15px;
 }
 
-/* #planning-header{
+#planning-header{
     display:grid;
     grid-template-columns:
     120px
@@ -230,23 +230,6 @@ section h3{
     border-bottom:2px solid #d9e3ea;
     margin-bottom:8px;
     justify-items:start;
-} */
-
-#planning-header{
-    display:grid;
-    grid-template-columns:
-    130px
-    90px
-    1fr
-    140px
-    140px;
-   align-items:center;
-    gap:10px;
-    padding:8px 12px;
-    font-weight:700;
-    color:#003A63;
-    border-bottom:2px solid #d9e3ea;
-    margin-bottom:8px;
 }
 
 /* =========================
