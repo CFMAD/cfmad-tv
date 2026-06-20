@@ -37,10 +37,11 @@ body{
 header{
     height:110px;
     background:#013450;
-    display:grid;
-    grid-template-columns: 42% 28% 30%;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
-    padding:0 30px;
+    padding:0 20px;
+    overflow:hidden;
 }
 
 
