@@ -352,9 +352,17 @@ grid-template-columns:
 }
 
 #facebook-link{
-    padding:14px;
-    font-size:14px;
-    word-break:break-word;
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+#facebook-qr{
+    width:120px;
+    height:120px;
+    object-fit:contain;
 }
 
 
