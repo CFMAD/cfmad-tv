@@ -326,7 +326,7 @@ grid-template-columns:
     flex:0 0 180px;
 }
 #facebook-card{
-    flex:0 0 120px;
+    flex:0 0 170px;
 }
 
 #urgent-card,
@@ -350,7 +350,7 @@ grid-template-columns:
     font-style:italic;
     line-height:1.4;
 }
-
+/* 
 #facebook-link{
     flex:1;
     display:flex;
@@ -364,7 +364,21 @@ grid-template-columns:
     height:120px;
     object-fit:contain;
 }
+*/
 
+#facebook-link{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+
+#facebook-qr{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}
 
 #urgent-card{
     background:#E61E25;
