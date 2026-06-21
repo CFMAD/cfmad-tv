@@ -94,10 +94,13 @@ break;
 ligne.className = "planning-card";
 
 ligne.innerHTML = `
-<span class="col-horaire"
-      style="background:${couleur}">
-      ${item.debut} - ${item.fin}
-</span>
+<div class="horaire-wrapper">
+    <span class="couleur-salle" style="background:${couleur}"></span>
+    <span class="col-horaire">
+        ${item.debut} - ${item.fin}
+    </span>
+</div>
+
 <span class="col-classe">${item.classe}</span>
 <span class="col-formation">${item.formation}</span>
 <span class="col-salle">${item.salle}</span>
