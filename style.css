@@ -199,12 +199,22 @@ section h3{
 #planning .planning-card{
 
     display:grid;
-    grid-template-columns:
+   
+/*    grid-template-columns:
         130px
         90px
         150px
         140px
         140px;
+*/
+   
+grid-template-columns:
+    1.2fr
+    0.8fr
+    1fr
+    1.3fr
+    1.3fr;
+   
     align-items:center;
     gap:10px;
     background:#F5F8FA;
@@ -215,14 +225,24 @@ section h3{
     font-size:15px;
 }
 
+
 #planning-header{
     display:grid;
-    grid-template-columns:
+ /*   grid-template-columns:
     120px
     80px
     150px
     150px
     150px;
+*/
+   
+grid-template-columns:
+    1.2fr
+    0.8fr
+    1fr
+    1.3fr
+    1.3fr;
+   
     gap:10px;
     padding:8px 12px;
     font-weight:700;
