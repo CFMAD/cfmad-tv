@@ -475,7 +475,7 @@ footer{
     display:none;
 }
 
-
+/*
 .col-horaire{
 
     display:inline-block;
@@ -484,11 +484,27 @@ footer{
     text-align:center;
     padding:6px 10px;
     border-radius:8px;
-    /*min-width:105px;*/
     width:100%;
     min-width:0;
 }
+*/
 
+.col-horaire{
+    font-weight:700;
+    color:#17374D;
+}
+.horaire-wrapper{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.couleur-salle{
+    width:4px;
+    height:32px;
+    border-radius:10px;
+    flex-shrink:0;
+}
 .col-classe{
     font-weight:700;
     color:#555;
