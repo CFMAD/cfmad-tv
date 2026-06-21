@@ -144,13 +144,23 @@ function mettreAJourHorloge() {
 
     const maintenant = new Date();
 
-    const heure =
-        maintenant.toLocaleTimeString("fr-FR");
+    const heure = maintenant.toLocaleTimeString("fr-FR");
 
-    const date =
-        maintenant.toLocaleDateString("fr-FR");
+    const jour = maintenant.toLocaleDateString("fr-FR", {
+        weekday: "long"
+    });
+
+    const date = maintenant.toLocaleDateString("fr-FR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+    });
 
     document.getElementById("heure").textContent = heure;
+
+    document.getElementById("jour").textContent =
+        jour.charAt(0).toUpperCase() + jour.slice(1);
+
     document.getElementById("date").textContent = date;
 }
 
