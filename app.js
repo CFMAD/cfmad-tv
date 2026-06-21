@@ -28,10 +28,10 @@ async function chargerDonnees() {
         }
 
         // facebook
-        if (data.facebook) {
-            document.getElementById("facebook-link").innerHTML =
-                `<a href="${data.facebook}" target="_blank">${data.facebook}</a>`;
-        }
+       // if (data.facebook) {
+           // document.getElementById("facebook-link").innerHTML =
+               // `<a href="${data.facebook}" target="_blank">${data.facebook}</a>`;
+        // }
 
         
         // bandeau bas
