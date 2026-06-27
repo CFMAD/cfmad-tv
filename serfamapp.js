@@ -290,3 +290,8 @@ reunionsSerfam:[
 urgentSerfam:"Le parking est fermé.",
 
 citationSerfam:"La famille est le premier lieu d'apprentissage."
+
+
+chargerDonnees();
+
+setInterval(chargerDonnees,60000);
