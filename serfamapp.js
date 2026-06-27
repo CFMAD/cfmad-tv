@@ -253,3 +253,38 @@ function chargerCitation(){
         donnees.citationSerfam || "";
 
 }
+
+
+
+
+reunionsSerfam:[
+
+   {
+
+      debut:"09:00",
+
+      fin:"10:30",
+
+      reunion:"Réunion équipe",
+
+      lieu:"Salle polyvalente"
+
+   },
+
+   {
+
+      debut:"14:00",
+
+      fin:"15:30",
+
+      reunion:"Accueil familles",
+
+      lieu:"Bureau 2"
+
+   }
+
+],
+
+urgentSerfam:"Le parking est fermé.",
+
+citationSerfam:"La famille est le premier lieu d'apprentissage."
