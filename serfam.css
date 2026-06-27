@@ -707,3 +707,147 @@ SCROLLBAR
     display:none;
 
 }
+
+
+/* ======================================================
+   FINITIONS
+====================================================== */
+
+/* Logo */
+
+#logo{
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+/* Photo */
+
+#photo-container{
+
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+
+}
+
+#photo-principale{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+/* Overlay */
+
+#photo-overlay{
+
+    z-index:5;
+
+}
+
+#photo-message{
+
+    letter-spacing:.5px;
+
+}
+
+/* Réunions */
+
+#reunions{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+/* Cartes infos */
+
+#infos>div{
+
+    min-height:180px;
+
+}
+
+/* Contact */
+
+#contact{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100%;
+
+}
+
+/* Vitrine */
+
+#vitrine{
+
+    background:white;
+
+}
+
+#vitrine div{
+
+    padding:10px;
+
+}
+
+#vitrine h3{
+
+    margin-bottom:8px;
+
+    color:var(--vert);
+
+}
+
+#vitrine p{
+
+    color:#666;
+
+}
+
+/* Footer */
+
+footer{
+
+    letter-spacing:.5px;
+
+}
+
+/* Animation photo */
+
+#photo-principale{
+
+    opacity:1;
+
+    transition:opacity 1s ease;
+
+}
+
+/* Animation générale */
+
+section{
+
+    transition:.35s;
+
+}
+
+/* Responsive Full HD */
+
+body{
+
+    min-width:1600px;
+
+}
