@@ -404,3 +404,306 @@ footer{
     width:100%;
 
 }
+
+
+
+/* ======================================================
+   CARTES REUNIONS
+====================================================== */
+
+.reunion-card{
+
+    background:white;
+    border-left:8px solid var(--orange);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.reunion-card:hover{
+
+    transform:translateX(6px);
+
+}
+
+.reunion-horaire{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--vert);
+
+}
+
+.reunion-titre{
+
+    margin-top:10px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:var(--texte);
+
+}
+
+.reunion-lieu{
+
+    margin-top:8px;
+
+    font-size:18px;
+
+    color:#666;
+
+}
+
+/* ======================================================
+URGENT
+====================================================== */
+
+#urgent-card{
+
+    background:#D62828;
+
+}
+
+#urgent-card h3{
+
+    background:transparent;
+
+    font-size:22px;
+
+}
+
+#urgent{
+
+    color:white;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+/* ======================================================
+CITATION
+====================================================== */
+
+#citation-card h3{
+
+    background:white;
+
+    color:var(--vert);
+
+}
+
+#citation{
+
+    font-size:20px;
+
+    color:#444;
+
+}
+
+/* ======================================================
+FACEBOOK
+====================================================== */
+
+#facebook-card h3{
+
+    background:#1877F2;
+
+}
+
+#facebook-qr{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:contain;
+
+}
+
+/* ======================================================
+CONTACT
+====================================================== */
+
+#contact-card h3{
+
+    background:var(--orange);
+
+}
+
+#contact{
+
+    font-size:20px;
+
+    font-weight:500;
+
+}
+
+/* ======================================================
+VITRINE
+====================================================== */
+
+#vitrine div{
+
+    transition:.35s;
+
+}
+
+#vitrine div:hover{
+
+    background:#FFF7EC;
+
+}
+
+#vitrine h3{
+
+    color:var(--vert);
+
+    font-size:22px;
+
+    margin-bottom:6px;
+
+}
+
+#vitrine p{
+
+    font-size:18px;
+
+    color:#555;
+
+    text-align:center;
+
+}
+
+/* ======================================================
+BANDEAU
+====================================================== */
+
+#bandeau{
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+#bandeau::after{
+
+    content:"";
+
+    display:inline-block;
+
+    width:100%;
+
+}
+
+.bandeau-texte{
+
+    display:inline-block;
+
+    padding-left:100%;
+
+    animation:defilement 45s linear infinite;
+
+}
+
+@keyframes defilement{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+/* ======================================================
+PHOTO
+====================================================== */
+
+#photo-principale{
+
+    transition:opacity 1s ease-in-out;
+
+}
+
+.fade-out{
+
+    opacity:0;
+
+}
+
+.fade-in{
+
+    opacity:1;
+
+}
+
+/* ======================================================
+ANIMATIONS
+====================================================== */
+
+@keyframes apparition{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.reunion-card,
+#infos > div,
+#photo-section{
+
+    animation:apparition .7s ease;
+
+}
+
+/* ======================================================
+SCROLLBAR
+====================================================== */
+
+#reunions{
+
+    scrollbar-width:none;
+
+}
+
+#reunions::-webkit-scrollbar{
+
+    display:none;
+
+}
