@@ -1,0 +1,406 @@
+/* ======================================================
+   SERFAM TV
+   Version 1.0
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --vert:#0E7C7B;
+    --orange:#F39A3E;
+    --beige:#FFF8F2;
+    --gris:#F3F5F7;
+    --texte:#21404A;
+    --ombre:0 6px 18px rgba(0,0,0,.12);
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--gris);
+    color:var(--texte);
+
+    height:100vh;
+    overflow:hidden;
+
+}
+
+/* ======================================================
+HEADER
+====================================================== */
+
+header{
+
+    height:110px;
+
+    background:var(--vert);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 30px;
+
+    color:white;
+
+}
+
+.header-left{
+
+    display:flex;
+    align-items:center;
+
+    gap:25px;
+
+}
+
+#logo{
+
+    height:85px;
+    width:auto;
+
+}
+
+#accroche{
+
+    font-family:'Caveat',cursive;
+
+    font-size:34px;
+
+    line-height:1;
+
+}
+
+#accroche span{
+
+    color:#FFE3A3;
+
+    font-size:42px;
+
+}
+
+.header-right{
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+}
+
+#heure{
+
+    font-size:46px;
+
+    font-weight:700;
+
+}
+
+.date-wrapper{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+#jour{
+
+    font-size:20px;
+
+}
+
+#date{
+
+    font-size:18px;
+
+    color:#DDEEEB;
+
+}
+
+/* ======================================================
+MAIN
+====================================================== */
+
+main{
+
+    display:grid;
+
+    grid-template-columns:65% 35%;
+
+    gap:20px;
+
+    padding:20px;
+
+    height:calc(100vh - 320px);
+
+}
+
+/* ======================================================
+SECTIONS
+====================================================== */
+
+section{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--ombre);
+
+}
+
+/* ======================================================
+PHOTO
+====================================================== */
+
+#photo-section{
+
+    position:relative;
+
+}
+
+#photo-principale{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+#photo-overlay{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:25px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.75)
+    );
+
+}
+
+#photo-message{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* ======================================================
+REUNIONS
+====================================================== */
+
+#reunions-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+#reunions-section h2{
+
+    background:var(--orange);
+
+    color:white;
+
+    padding:16px;
+
+    text-align:center;
+
+    font-size:24px;
+
+}
+
+#reunions{
+
+    flex:1;
+
+    overflow:hidden;
+
+    padding:20px;
+
+}
+
+/* ======================================================
+INFOS
+====================================================== */
+
+#infos{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+    margin:0 20px;
+
+    background:transparent;
+
+    box-shadow:none;
+
+}
+
+#infos>div{
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--ombre);
+
+    overflow:hidden;
+
+}
+
+#infos h3{
+
+    background:var(--vert);
+
+    color:white;
+
+    text-align:center;
+
+    padding:14px;
+
+    font-size:20px;
+
+}
+
+#urgent{
+
+    padding:18px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+#citation{
+
+    padding:18px;
+
+    text-align:center;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+}
+
+#facebook-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+#facebook-qr{
+
+    width:120px;
+
+    margin:auto;
+
+}
+
+#contact{
+
+    padding:18px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+/* ======================================================
+VITRINE
+====================================================== */
+
+#vitrine-section{
+
+    margin:20px;
+
+    height:90px;
+
+}
+
+#vitrine{
+
+    display:flex;
+
+    height:100%;
+
+}
+
+#vitrine div{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-right:1px solid #ddd;
+
+}
+
+#vitrine div:last-child{
+
+    border-right:none;
+
+}
+
+/* ======================================================
+FOOTER
+====================================================== */
+
+footer{
+
+    height:65px;
+
+    background:var(--orange);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+#bandeau{
+
+    width:100%;
+
+}
