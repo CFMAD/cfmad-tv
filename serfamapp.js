@@ -170,3 +170,86 @@ setInterval(
     15000
 
 );
+
+
+/* ==========================================================
+   REUNIONS
+========================================================== */
+
+function chargerReunions(){
+
+    const conteneur = document.getElementById("reunions");
+
+    if(!conteneur) return;
+
+    conteneur.innerHTML = "";
+
+    if(!Array.isArray(donnees.reunionsSerfam)) return;
+
+    donnees.reunionsSerfam.forEach(reunion=>{
+
+        const carte = document.createElement("div");
+
+        carte.className="reunion-card";
+
+        carte.innerHTML=`
+
+            <div class="reunion-horaire">
+
+                🕘 ${reunion.debut} - ${reunion.fin}
+
+            </div>
+
+            <div class="reunion-titre">
+
+                ${reunion.reunion}
+
+            </div>
+
+            <div class="reunion-lieu">
+
+                📍 ${reunion.lieu}
+
+            </div>
+
+        `;
+
+        conteneur.appendChild(carte);
+
+    });
+
+}
+
+
+/* ==========================================================
+   MESSAGE URGENT
+========================================================== */
+
+function chargerUrgent(){
+
+    const zone=document.getElementById("urgent");
+
+    if(!zone) return;
+
+    zone.textContent=
+
+        donnees.urgentSerfam || "Aucun message";
+
+}
+
+
+/* ==========================================================
+   CITATION
+========================================================== */
+
+function chargerCitation(){
+
+    const zone=document.getElementById("citation");
+
+    if(!zone) return;
+
+    zone.textContent=
+
+        donnees.citationSerfam || "";
+
+}
