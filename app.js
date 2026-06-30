@@ -73,6 +73,10 @@ case "Salle Solidarité":
 couleur = "#ff33cc";
 break;
 
+case "Salle Entraide":
+couleur = "#ff33cc";
+break;
+        
 case "Cuisine":
 couleur = "#ff0000";
 break;
