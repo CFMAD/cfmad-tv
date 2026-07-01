@@ -131,16 +131,15 @@ header{
 ========================== */
 
 main{
-    display:grid;
-    grid-template-columns:
-        40%
-        33%
-        27%;
-    gap:22px;
-    padding:22px;
-    height:calc(100% - 270px);
-    overflow:hidden;
-    align-items:start;
+display:grid;
+grid-template-columns:
+39%
+33%
+24%;
+gap:18px;
+padding:18px;
+height:calc(100% - 270px);
+overflow:hidden;
 }
 
 /* ==========================
@@ -260,30 +259,30 @@ section h3{
 }
 
 .col-horaire{
-    font-size:17px;
+    font-size:12px;
     font-weight:700;
     color:#17374D;
 }
 
 .col-classe{
-    font-size:18px;
+    font-size:16px;
     font-weight:700;
     color:#555;
 }
 
 .col-formation{
-    font-size:18px;
+    font-size:16px;
     font-weight:700;
     color:#17374D;
 }
 
 .col-salle{
-    font-size:17px;
+    font-size:15px;
     color:#444;
 }
 
 .col-formateur{
-    font-size:17px;
+    font-size:15px;
     color:#444;
 }
 
@@ -437,7 +436,7 @@ section h3{
 #facebook-card{
     display:flex;
     flex-direction:column;
-    min-height:215px;
+    min-height:185px;
 }
 
 #facebook-card h3{
@@ -457,8 +456,8 @@ section h3{
 }
 
 #facebook-qr{
-    width:135px;
-    height:135px;
+    width:115px;
+    height:115px;
     object-fit:contain;
     display:block;
 }
