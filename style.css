@@ -343,3 +343,135 @@ section h3{
 
 
 
+
+
+
+
+/* =====================================================
+   CFMAD TV PREMIUM V2
+   Partie 3 : Colonne droite
+===================================================== */
+
+/* ==========================
+   COLONNE DROITE
+========================== */
+
+#right-column{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    background:transparent;
+    height:100%;
+}
+
+/* ==========================
+   CARTES
+========================== */
+
+#urgent-card,
+#citation-card,
+#facebook-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+}
+
+/* ==========================
+   URGENT
+========================== */
+
+#urgent-card{
+    background:#E61E25;
+    min-height:175px;
+}
+
+#urgent-card h3{
+    background:transparent;
+    color:white;
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    padding:18px 10px 10px;
+}
+
+#urgent{
+    color:white;
+    font-size:24px;
+    font-weight:500;
+    line-height:1.45;
+    text-align:center;
+    padding:12px 18px 20px;
+}
+
+/* ==========================
+   CITATION
+========================== */
+
+#citation-card{
+    background:white;
+}
+
+#citation-card h3{
+    background:white;
+    color:#7FB21A;
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    padding:18px 10px 12px;
+}
+
+#citation{
+    padding:10px 20px 22px;
+    text-align:center;
+    font-size:22px;
+    color:#333;
+    line-height:1.6;
+    font-style:italic;
+}
+
+/* ==========================
+   FACEBOOK
+========================== */
+
+#facebook-card{
+    display:flex;
+    flex-direction:column;
+    min-height:215px;
+}
+
+#facebook-card h3{
+    background:#1877F2;
+    color:white;
+    text-align:center;
+    font-size:24px;
+    padding:14px;
+}
+
+#facebook-link{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+#facebook-qr{
+    width:135px;
+    height:135px;
+    object-fit:contain;
+    display:block;
+}
+
+/* ==========================
+   LIEN FACEBOOK
+========================== */
+#facebook-link a{
+    color:#1877F2;
+    font-size:20px;
+    font-weight:700;
+    text-decoration:none;
+    word-break:break-word;
+    text-align:center;
+}
+
