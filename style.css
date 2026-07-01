@@ -138,7 +138,7 @@ grid-template-columns:
 24%;
 gap:18px;
 padding:18px;
-height:calc(100% - 270px);
+height:calc(100% - 320px);
 overflow:hidden;
 }
 
@@ -486,8 +486,8 @@ section h3{
 ========================== */
 
 #vitrine-section{
-    margin:0 22px 18px;
-    height:95px;
+    margin:0 18px 10px;
+    height:75px;
     display:flex;
 }
 
@@ -532,7 +532,7 @@ section h3{
 ========================== */
 
 footer{
-    height:85px;
+    height:65px;
     background:#7AA73D;
     color:white;
     display:flex;
@@ -544,7 +544,7 @@ footer{
 
 #bandeau{
     width:100%;
-    font-size:28px;
+    font-size:24px;
     font-weight:700;
     white-space:nowrap;
     overflow:hidden;
