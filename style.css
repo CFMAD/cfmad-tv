@@ -1,6 +1,11 @@
-/* =========================
-   CFMAD TV - PREMIUM V1
-========================= */
+/* =====================================================
+   CFMAD TV PREMIUM V2
+   Partie 1 : Base + Header + Main
+===================================================== */
+
+/* ==========================
+   RESET
+========================== */
 
 *{
     margin:0;
@@ -8,31 +13,24 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family: Segoe UI, Arial, sans-serif;
-    background:#E9EEF2;
-    color:#17374D;
-    height:100vh;
-    overflow:hidden;
-   min-height:100vh;
+html{
+    width:100%;
+    height:100%;
 }
 
-/* =========================
-   HEADER
-========================= */
+body{
 
-/*header{
-    height:110px;
-    background:#013450;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:0 15px;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#E9EEF2;
+    color:#17374D;
+    width:100%;
+    height:100%;
     overflow:hidden;
-}*/
+}
 
+/* ==========================
+   HEADER
+========================== */
 
 header{
     height:110px;
@@ -40,87 +38,128 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 20px;
+    padding:0 28px;
     overflow:hidden;
+    flex-shrink:0;
 }
 
+/* ---------- Logo ---------- */
 
-/* LEFT */
 .header-left{
     display:flex;
     align-items:center;
-    justify-content:center;
+    gap:18px;
+
 }
 
+#logo{
+    display:flex;
+    align-items:center;
+
+}
 
 #logo img{
-    height:300px;
+    height:88px;
     width:auto;
     display:block;
-   margin-left:-5px;
+
 }
 
-/* bloc texte logo */
-.brand{
-    display:flex;
-    flex-direction:column;
-}
-
-.nom-centre{
-    font-size:24px;
-    font-weight:700;
-    line-height:1.1;
-}
+/* ---------- Slogan ---------- */
 
 #slogan{
     font-family:'Caveat', cursive;
-    line-height:0.9;
     transform:rotate(-4deg);
+    line-height:0.95;
     text-align:center;
+    white-space:nowrap;
 }
 
 #slogan .blanc{
     color:white;
-    font-size:26px;
+    font-size:28px;
+    display:block;
 }
 
 #slogan .jaune{
     color:#FFD84D;
-    font-size:36px;
+    font-size:38px;
     font-weight:700;
 }
 
-/* RIGHT */
+/* ---------- Horloge ---------- */
+
 .header-right{
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:15px;
+    gap:18px;
 }
 
 .clock-icon{
     font-size:42px;
-    opacity:0.85;
+    opacity:.9;
 }
 
 #heure{
-    font-size:42px;
+    color:white;
+    font-size:48px;
     font-weight:700;
-   color:white;
+    letter-spacing:1px;
 }
 
 .date-wrapper{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     text-align:left;
+}
+
+#jour{
+    color:white;
+    font-size:20px;
+    font-weight:600;
 }
 
 #date{
     color:#8BC34A;
+    font-size:18px;
     font-weight:700;
 }
 
-#jour{
-    font-size:18px;
-   color:white;
+/* ==========================
+   CONTENU PRINCIPAL
+========================== */
+
+main{
+    display:grid;
+    grid-template-columns:
+        40%
+        33%
+        27%;
+    gap:22px;
+    padding:22px;
+    height:calc(100% - 270px);
+    overflow:hidden;
+    align-items:start;
+}
+
+/* ==========================
+   CARTES
+========================== */
+section{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+    overflow:hidden;
+}
+
+section h2,
+section h3{
+    background:#0D4A5B;
+    color:white;
+    padding:12px 18px;
+    font-size:22px;
+    font-weight:600;
 }
 
 
@@ -128,21 +167,6 @@ header{
 
 
 
-
-
-
-         .planning-card{
-             background:#f4f6f8;
-             border-radius:12px;
-             padding:15px;
-             margin-bottom:12px;
-             box-shadow:0 2px 8px rgba(0,0,0,0.08);
-             transition:all .3s ease;
-         }
-         
-         .planning-card:hover{
-             transform:translateX(4px);
-         }
 
 
 /* =========================
