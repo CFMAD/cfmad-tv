@@ -147,7 +147,9 @@ ligne.innerHTML = `
 function mettreAJourHorloge() {
 
     const maintenant = new Date();
-
+// Correction Smart TV (+1 heure)
+maintenant.setHours(maintenant.getHours() + 1);
+    
     const heure = maintenant.toLocaleTimeString("fr-FR");
 
     const jour = maintenant.toLocaleDateString("fr-FR", {
