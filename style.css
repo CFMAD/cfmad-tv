@@ -167,128 +167,137 @@ section h3{
 
 
 
+/* =====================================================
+   CFMAD TV PREMIUM V2
+   Partie 2 : Planning + Photo
+===================================================== */
 
-
-/* =========================
-   MAIN
-========================= */
-
-main{
-    display:grid;
-    grid-template-columns:36% 34% 27%;
-    gap:20px;
-    padding:20px;
-
-    height:calc(100vh - 290px);
-    overflow:hidden;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-section{
-    background:white;
-
-    border-radius:18px;
-
-    box-shadow:0 4px 15px rgba(0,0,0,0.10);
-
-    overflow:hidden;
-}
-
-section h2,
-section h3{
-    background:#0D4A5B;
-    color:white;
-    padding:10px 16px;
-    font-size:18px;
-    font-weight:600;
-}
-
-/* =========================
+/* ==========================
    PLANNING
-========================= */
+========================== */
 
 #planning-section{
     display:flex;
     flex-direction:column;
+    min-height:0;
 }
 
 #planning{
-    padding:15px;
-    overflow:auto;
+    flex:1;
+    padding:14px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    scrollbar-width:none;
 }
 
-#planning .planning-card{
-
-    display:grid;
-   
-/*    grid-template-columns:
-        130px
-        90px
-        150px
-        140px
-        140px;
-*/
-   
-grid-template-columns:
-    1.3fr
-    0.8fr
-    1fr
-    1.3fr
-    1.3fr;
-   
-    align-items:center;
-    gap:10px;
-    background:#F5F8FA;
-    border-radius:10px;
-    padding:8px 12px;
-    margin-bottom:6px;
-    min-height:48px;
-    font-size:15px;
+#planning::-webkit-scrollbar{
+    display:none;
 }
 
+/* ---------- Entête ---------- */
 
 #planning-header{
     display:grid;
- /*   grid-template-columns:
-    120px
-    80px
-    150px
-    150px
-    150px;
-*/
-   
-grid-template-columns:
-    1.3fr
-    0.8fr
-    1fr
-    1.3fr
-    1.3fr;
-   
+    grid-template-columns:
+        1.35fr
+        0.85fr
+        1.15fr
+        1.20fr
+        1.30fr;
     gap:10px;
-    padding:8px 12px;
-    font-weight:700;
+    padding:10px 12px;
+    margin-bottom:10px;
+    border-bottom:2px solid #d8e3eb;
     color:#003A63;
-    border-bottom:2px solid #d9e3ea;
+    font-size:18px;
+    font-weight:700;
+}
+
+#planning-header span{
+    display:flex;
+    align-items:center;
+}
+
+/* ---------- Carte planning ---------- */
+
+.planning-card{
+    display:grid;
+    grid-template-columns:
+        1.35fr
+        0.85fr
+        1.15fr
+        1.20fr
+        1.30fr;
+    gap:10px;
+    align-items:center;
+    background:#F7F9FB;
+    border-radius:12px;
     margin-bottom:8px;
-    justify-items:start;
+    padding:12px;
+    min-height:64px;
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.05);
+    transition:.25s;
 }
-#planning-header span,
-.planning-card span{
-    justify-self:start;
+
+.planning-card:hover{
+    transform:translateX(4px);
 }
-/* =========================
+
+/* ---------- Horaire ---------- */
+
+.horaire-wrapper{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.couleur-salle{
+    width:6px;
+    height:42px;
+    border-radius:10px;
+    flex-shrink:0;
+}
+
+.col-horaire{
+    font-size:20px;
+    font-weight:700;
+    color:#17374D;
+}
+
+.col-classe{
+    font-size:18px;
+    font-weight:700;
+    color:#555;
+}
+
+.col-formation{
+    font-size:18px;
+    font-weight:700;
+    color:#17374D;
+}
+
+.col-salle{
+    font-size:17px;
+    color:#444;
+}
+
+.col-formateur{
+    font-size:17px;
+    color:#444;
+}
+
+
+/* ==========================
    PHOTO
-========================= */
+========================== */
 
 #photo-section{
     position:relative;
     overflow:hidden;
     border-radius:20px;
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.18);
+        0 10px 24px rgba(0,0,0,.18);
 }
 
 #photo-container{
@@ -299,372 +308,38 @@ grid-template-columns:
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:transform 8s ease;
-}
-
-#photo-overlay{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    padding:20px;
-    background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,0.75),
-        rgba(0,0,0,0)
-    );
-
-    color:white;
-}
-
-#photo-message{
-    font-size:28px;
-    font-weight:700;
-    text-shadow:
-        0 2px 6px rgba(0,0,0,0.4);
+    display:block;
+    transition:transform 10s ease;
 }
 
 #photo-section:hover #photo-principale{
     transform:scale(1.05);
 }
 
-/* =========================
-   COLONNE DROITE
-========================= */
+/* ---------- Bandeau photo ---------- */
 
-#right-column{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    align-self:start;
-    padding-bottom:15px;
-   background:#E9EEF2;
-   /* max-height:100%;*/
-}
-
-#urgent-card{
-    flex:0 0 180px;
-}
-#citation-card{
-    flex:0 0 180px;
-}
-#facebook-card{
-    flex:0 0 170px;
+#photo-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:22px;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.82),
+            rgba(0,0,0,0)
+        );
 }
 
-#urgent-card,
-#citation-card,
-#facebook-card{
 
-    background:white;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.10);
-    overflow:hidden;
-}
-
-#urgent{
-    padding:14px;
-    font-size:16px;
-}
-
-#citation{
-    padding:14px;
-    font-size:15px;
-    font-style:italic;
-    line-height:1.4;
-}
-/* 
-#facebook-link{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:15px;
-}
-
-#facebook-qr{
-    width:120px;
-    height:120px;
-    object-fit:contain;
-}
-*/
-
-#facebook-link{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:10px;
-}
-
-#facebook-qr{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-}
-
-#urgent-card{
-    background:#E61E25;
+#photo-message{
     color:white;
-}
-
-#urgent-card h3{
-
-    background:transparent;
-    color:white;
-    text-align:center;
-    font-size:22px;
+    font-size:34px;
     font-weight:700;
-    padding-top:20px;
-    padding-bottom:10px;
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.45);
 }
 
-#urgent{
-
-    color:white;
-    text-align:center;
-    font-size:18px;
-    line-height:1.4;
-}
-
-
-/* =========================
-   VITRINE
-========================= */
-
-#vitrine-section{
-
-    margin:0 20px;
-
-    height:90px;
-}
-
-#vitrine{
-    display:flex;
-
-    height:100%;
-}
-
-#vitrine div{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-right:1px solid #DDD;
-}
-
-#vitrine div:last-child{
-    border-right:none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    height:70px;
-
-    background:#7AA73D;
-
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:0 25px;
-
-    font-size:24px;
-
-    font-weight:600;
-}
-
-#bandeau{
-    width:100%;
-}
-
-
-
-.planning-card{
-    background:#f4f6f8;
-    border-radius:12px;
-    padding:15px;
-    margin-bottom:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    transition:all .3s ease;
-}
-
-.planning-card:hover{
-    transform:translateX(4px);
-}
-
-
-
-
-
-#planning {
-
-    scrollbar-width:none;
-}
-
-#planning::-webkit-scrollbar {
-
-    display:none;
-}
-
-/*
-.col-horaire{
-
-    display:inline-block;
-    color:white;
-    font-weight:700;
-    text-align:center;
-    padding:6px 10px;
-    border-radius:8px;
-    width:100%;
-    min-width:0;
-}
-*/
-
-.col-horaire{
-    font-weight:700;
-    color:#17374D;
-}
-.horaire-wrapper{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.couleur-salle{
-    width:4px;
-    height:32px;
-    border-radius:10px;
-    flex-shrink:0;
-}
-.col-classe{
-    font-weight:700;
-    color:#555;
-}
-
-.col-formation{
-    font-weight:700;
-}
-
-/* test
-.col-salle{
-    font-size:14px;
-}
-
-.col-formateur{
-    font-size:14px;
-    color:#666;
-}
-*/
-
-.col-salle,
-.col-formateur{
-    justify-self:start;
-    text-align:left;
-}
-
-
-
-#citation-card{
-
-    background:white;
-}
-
-#citation-card h3{
-
-    background:transparent;
-    color:#7FB21A;
-    font-size:22px;
-    font-weight:700;
-    padding:18px 20px 8px 20px;
-}
-
-#citation{
-
-    color:#333;
-    font-size:20px;
-    line-height:1.6;
-    font-style:italic;
-    padding:0 20px 20px 20px;
-}
-
-#citation-card{
-
-    background:white;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.10);
-    padding:0;
-    overflow:hidden;
-}
-
-#citation-card h3{
-
-    background:white !important;
-    color:#7FB21A !important;
-    text-align:center;
-    font-size:22px;
-    font-weight:700;
-    padding:18px 0 10px 0;
-}
-
-#citation{
-
-    padding:20px;
-    text-align:center;
-    color:#333;
-    font-size:18px;
-    line-height:1.6;
-    font-style:italic;
-}
-
-#facebook-card{
-
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-}
-
-#facebook-card h3{
-
-    background:#1877F2;
-    color:white;
-    text-align:center;
-    font-size:20px;
-    padding:12px;
-}
-
-#facebook-link{
-
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-#facebook-link a{
-
-    color:#1877F2;
-    font-weight:700;
-    text-decoration:none;
-    word-break:break-word;
-}
 
 
