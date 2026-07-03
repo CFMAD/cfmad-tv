@@ -1,11 +1,12 @@
-/* =====================================================
-   CFMAD TV PREMIUM V2
-   Partie 1 : Base + Header + Main
-===================================================== */
+/* ==========================================================
+   CFMAD TV
+   VERSION SMART TV
+   Partie 1 : Base + Header + Structure
+========================================================== */
 
-/* ==========================
+/* ===========================
    RESET
-========================== */
+=========================== */
 
 *{
     margin:0;
@@ -13,331 +14,418 @@
     box-sizing:border-box;
 }
 
-html{
+html,
+body{
     width:100%;
     height:100%;
 }
 
 body{
 
-    font-family:"Segoe UI", Arial, sans-serif;
     background:#E9EEF2;
+    font-family:"Segoe UI",Arial,sans-serif;
     color:#17374D;
-    width:100%;
-    height:100%;
+
     overflow:hidden;
 }
 
-/* ==========================
+/* ===========================
    HEADER
-========================== */
+=========================== */
 
 header{
+
+    width:100%;
     height:110px;
+
     background:#013450;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 28px;
-    overflow:hidden;
-    flex-shrink:0;
+
+    padding:0 25px;
 }
 
-/* ---------- Logo ---------- */
+/* ===========================
+   LOGO
+=========================== */
 
 .header-left{
+
     display:flex;
     align-items:center;
-    gap:18px;
-
 }
 
 #logo{
+
     display:flex;
     align-items:center;
-
 }
 
 #logo img{
-    height:300px;
+
+    height:82px;
     width:auto;
     display:block;
-
 }
 
-/* ---------- Slogan ---------- */
+/* ===========================
+   SLOGAN
+=========================== */
+
+.brand{
+
+    margin-left:22px;
+}
 
 #slogan{
-    font-family:'Caveat', cursive;
-    transform:rotate(-4deg);
+
+    font-family:'Caveat',cursive;
     line-height:0.95;
-    text-align:center;
-    white-space:nowrap;
+    transform:rotate(-4deg);
 }
 
 #slogan .blanc{
-    color:white;
-    font-size:28px;
+
     display:block;
+    color:white;
+    font-size:29px;
 }
 
 #slogan .jaune{
+
+    display:block;
     color:#FFD84D;
-    font-size:38px;
-    font-weight:700;
+    font-size:40px;
+    font-weight:bold;
 }
 
-/* ---------- Horloge ---------- */
+/* ===========================
+   HORLOGE
+=========================== */
 
 .header-right{
+
     display:flex;
     align-items:center;
-    gap:18px;
 }
 
 .clock-icon{
-    font-size:42px;
-    opacity:.9;
+
+    font-size:38px;
+    color:white;
+    margin-right:12px;
 }
 
 #heure{
+
     color:white;
-    font-size:48px;
-    font-weight:700;
-    letter-spacing:1px;
+    font-size:52px;
+    font-weight:bold;
 }
 
 .date-wrapper{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+
+    margin-left:16px;
     text-align:left;
 }
 
 #jour{
+
     color:white;
     font-size:20px;
     font-weight:600;
 }
 
 #date{
+
     color:#8BC34A;
     font-size:18px;
-    font-weight:700;
+    font-weight:bold;
 }
 
-/* ==========================
-   CONTENU PRINCIPAL
-========================== */
+/* ===========================
+   CONTENU
+=========================== */
 
 main{
-display:grid;
-grid-template-columns:
-39%
-33%
-24%;
-gap:18px;
-padding:18px;
-height:calc(100% - 320px);
-overflow:hidden;
+
+    width:100%;
+
+    height:620px;
+
+    padding:18px;
+
+    display:grid;
+
+    grid-template-columns:
+        41%
+        31%
+        28%;
+
+    column-gap:18px;
 }
 
-/* ==========================
+/* ===========================
    CARTES
-========================== */
+=========================== */
+
 section{
+
     background:white;
+
     border-radius:18px;
-    box-shadow:0 6px 18px rgba(0,0,0,.10);
+
     overflow:hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.10);
 }
 
 section h2,
 section h3{
+
     background:#0D4A5B;
+
     color:white;
+
     padding:12px 18px;
-    font-size:22px;
+
+    font-size:20px;
+
     font-weight:600;
 }
 
+/* ===========================
+   COLONNE DROITE
+=========================== */
+
+#right-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    background:transparent;
+}
 
 
 
 
 
-/* =====================================================
-   CFMAD TV PREMIUM V2
+
+/* ==========================================================
+   CFMAD TV
+   VERSION SMART TV
    Partie 2 : Planning + Photo
-===================================================== */
+========================================================== */
 
-/* ==========================
+/* ===========================
    PLANNING
-========================== */
+=========================== */
 
 #planning-section{
+
     display:flex;
     flex-direction:column;
-    min-height:0;
+
+    height:100%;
 }
 
 #planning{
-    flex:1;
-    padding:14px;
-    overflow-y:auto;
-    overflow-x:hidden;
-    scrollbar-width:none;
-}
 
-#planning::-webkit-scrollbar{
-    display:none;
+    flex:1;
+
+    padding:12px;
+
+    overflow:hidden;
 }
 
 /* ---------- Entête ---------- */
 
 #planning-header{
+
     display:grid;
+
     grid-template-columns:
-        1.35fr
-        0.85fr
-        1.15fr
+        1.25fr
+        0.80fr
+        1.05fr
         1.20fr
-        1.30fr;
-    gap:10px;
-    padding:10px 12px;
-    margin-bottom:10px;
-    border-bottom:2px solid #d8e3eb;
+        1.20fr;
+
+    gap:8px;
+
+    padding:8px 10px;
+
+    border-bottom:2px solid #D9E3EA;
+
+    margin-bottom:8px;
+
     color:#003A63;
-    font-size:18px;
+
+    font-size:15px;
+
     font-weight:700;
 }
 
-#planning-header span{
-    display:flex;
-    align-items:center;
-}
-
-/* ---------- Carte planning ---------- */
+/* ---------- Cartes ---------- */
 
 .planning-card{
+
     display:grid;
+
     grid-template-columns:
-        1.35fr
-        0.85fr
-        1.15fr
+        1.25fr
+        0.80fr
+        1.05fr
         1.20fr
-        1.30fr;
-    gap:10px;
+        1.20fr;
+
+    gap:8px;
+
     align-items:center;
-    background:#F7F9FB;
-    border-radius:12px;
-    margin-bottom:8px;
-    padding:12px;
-    min-height:64px;
+
+    background:#F5F8FA;
+
+    border-radius:10px;
+
+    padding:8px 10px;
+
+    margin-bottom:6px;
+
+    min-height:46px;
+
     box-shadow:
         0 2px 6px rgba(0,0,0,.05);
-    transition:.25s;
 }
 
-.planning-card:hover{
-    transform:translateX(4px);
+.planning-card span{
+
+    font-size:14px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
 }
 
 /* ---------- Horaire ---------- */
 
 .horaire-wrapper{
+
     display:flex;
+
     align-items:center;
-    gap:12px;
+
+    gap:10px;
 }
 
 .couleur-salle{
-    width:6px;
-    height:42px;
-    border-radius:10px;
+
+    width:5px;
+
+    height:30px;
+
+    border-radius:8px;
+
     flex-shrink:0;
 }
 
 .col-horaire{
-    font-size:16px;
+
     font-weight:700;
+
     color:#17374D;
 }
 
 .col-classe{
-    font-size:16px;
+
     font-weight:700;
+
     color:#555;
 }
 
 .col-formation{
-    font-size:16px;
+
     font-weight:700;
-    color:#17374D;
 }
 
 .col-salle{
-    font-size:15px;
+
     color:#444;
 }
 
 .col-formateur{
-    font-size:15px;
-    color:#444;
+
+    color:#555;
 }
 
-
-/* ==========================
+/* ===========================
    PHOTO
-========================== */
+=========================== */
 
 #photo-section{
+
     position:relative;
+
     overflow:hidden;
-    border-radius:20px;
-    box-shadow:
-        0 10px 24px rgba(0,0,0,.18);
+
+    border-radius:18px;
 }
 
 #photo-container{
+
+    width:100%;
+
     height:100%;
 }
 
 #photo-principale{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
+
     display:block;
-    transition:transform 10s ease;
 }
-
-#photo-section:hover #photo-principale{
-    transform:scale(1.05);
-}
-
-/* ---------- Bandeau photo ---------- */
 
 #photo-overlay{
+
     position:absolute;
+
     left:0;
+
     right:0;
+
     bottom:0;
-    padding:22px;
+
+    padding:18px;
+
     background:
         linear-gradient(
             to top,
-            rgba(0,0,0,.82),
+            rgba(0,0,0,.72),
             rgba(0,0,0,0)
         );
 }
 
-
 #photo-message{
+
     color:white;
-    font-size:34px;
+
+    font-size:28px;
+
     font-weight:700;
+
     text-shadow:
-        0 2px 10px rgba(0,0,0,.45);
+        0 2px 6px rgba(0,0,0,.45);
 }
 
 
@@ -346,255 +434,375 @@ section h3{
 
 
 
-/* =====================================================
-   CFMAD TV PREMIUM V2
-   Partie 3 : Colonne droite
-===================================================== */
 
-/* ==========================
+
+
+/* ==========================================================
+   CFMAD TV
+   VERSION SMART TV
+   Partie 3 : Colonne droite
+========================================================== */
+
+/* ===========================
    COLONNE DROITE
-========================== */
+=========================== */
 
 #right-column{
+
     display:flex;
     flex-direction:column;
-    gap:18px;
-    background:transparent;
+    justify-content:space-between;
+
     height:100%;
 }
 
-/* ==========================
+/* ===========================
    CARTES
-========================== */
+=========================== */
 
 #urgent-card,
 #citation-card,
 #facebook-card{
-    background:white;
+
     border-radius:18px;
+
     overflow:hidden;
-    box-shadow:0 6px 18px rgba(0,0,0,.10);
+
+    background:white;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.10);
 }
 
-/* ==========================
+/* ===========================
    URGENT
-========================== */
+=========================== */
 
 #urgent-card{
+
     background:#E61E25;
-    min-height:175px;
+
+    height:170px;
 }
 
 #urgent-card h3{
+
     background:transparent;
+
     color:white;
+
     text-align:center;
-    font-size:26px;
-    font-weight:700;
-    padding:18px 10px 10px;
+
+    font-size:22px;
+
+    padding:16px 10px 8px;
 }
 
 #urgent{
+
     color:white;
-    font-size:24px;
-    font-weight:500;
-    line-height:1.45;
+
+    font-size:18px;
+
+    font-weight:600;
+
     text-align:center;
-    padding:12px 18px 20px;
+
+    line-height:1.4;
+
+    padding:10px 15px;
 }
 
-/* ==========================
+/* ===========================
    CITATION
-========================== */
+=========================== */
 
 #citation-card{
-    background:white;
+
+    height:180px;
 }
 
 #citation-card h3{
+
     background:white;
+
     color:#7FB21A;
+
     text-align:center;
-    font-size:26px;
-    font-weight:700;
-    padding:18px 10px 12px;
+
+    font-size:22px;
+
+    padding:16px 10px 8px;
 }
 
 #citation{
-    padding:10px 20px 22px;
+
+    padding:8px 18px;
+
     text-align:center;
-    font-size:22px;
+
     color:#333;
-    line-height:1.6;
+
+    font-size:18px;
+
+    line-height:1.45;
+
     font-style:italic;
 }
 
-/* ==========================
+/* ===========================
    FACEBOOK
-========================== */
+=========================== */
 
 #facebook-card{
+
+    height:170px;
+
     display:flex;
+
     flex-direction:column;
-    min-height:185px;
 }
 
 #facebook-card h3{
+
     background:#1877F2;
+
     color:white;
+
     text-align:center;
-    font-size:24px;
-    padding:14px;
+
+    font-size:20px;
+
+    padding:12px;
 }
 
 #facebook-link{
+
     flex:1;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
-    padding:15px;
 }
 
+/* -------- QR -------- */
+
 #facebook-qr{
-    width:115px;
-    height:115px;
+
+    width:125px;
+
+    height:125px;
+
     object-fit:contain;
+
     display:block;
 }
 
-/* ==========================
-   LIEN FACEBOOK
-========================== */
+/* -------- Lien -------- */
+
 #facebook-link a{
+
     color:#1877F2;
-    font-size:20px;
-    font-weight:700;
+
     text-decoration:none;
-    word-break:break-word;
+
+    font-weight:700;
+
+    font-size:18px;
+
     text-align:center;
+
+    word-break:break-word;
 }
 
 
-
-/* =====================================================
-   CFMAD TV PREMIUM V2
+/* ==========================================================
+   CFMAD TV
+   VERSION SMART TV
    Partie 4 : Vitrine + Footer + Finitions
-===================================================== */
+========================================================== */
 
-/* ==========================
+/* ===========================
    VITRINE
-========================== */
+=========================== */
 
 #vitrine-section{
-    margin:0 18px 10px;
-    height:75px;
-    display:flex;
+
+    width:calc(100% - 36px);
+
+    margin:0 18px;
+
+    height:90px;
 }
 
 #vitrine{
-    display:flex;
+
     width:100%;
+
     height:100%;
+
+    display:flex;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.10);
 }
 
 #vitrine div{
+
     flex:1;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
-    padding:8px 15px;
-    border-right:1px solid #E3E3E3;
+
+    padding:8px 12px;
+
+    border-right:1px solid #E2E2E2;
 }
 
 #vitrine div:last-child{
+
     border-right:none;
 }
 
 #vitrine h3{
+
     background:transparent;
+
     color:#0D4A5B;
-    font-size:24px;
+
+    font-size:20px;
+
     font-weight:700;
+
+    margin-bottom:4px;
+
     padding:0;
-    margin-bottom:6px;
 }
 
 #vitrine p{
+
     color:#555;
-    font-size:18px;
-    line-height:1.35;
+
+    font-size:15px;
+
+    line-height:1.30;
 }
 
-/* ==========================
+/* ===========================
    FOOTER
-========================== */
+=========================== */
 
 footer{
-    height:65px;
+
+    width:100%;
+
+    height:60px;
+
     background:#7AA73D;
+
     color:white;
+
     display:flex;
+
     align-items:center;
-    padding:0 30px;
+
+    padding:0 22px;
+
     overflow:hidden;
-    flex-shrink:0;
 }
 
 #bandeau{
+
     width:100%;
-    font-size:24px;
+
+    font-size:22px;
+
     font-weight:700;
+
     white-space:nowrap;
+
     overflow:hidden;
+
     text-overflow:ellipsis;
 }
 
-/* ==========================
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+}
+
+/* ===========================
    LIENS
-========================== */
+=========================== */
 
 a{
+
     color:inherit;
+
     text-decoration:none;
 }
 
-/* ==========================
-   IMAGES
-========================== */
+/* ===========================
+   SCROLLBAR
+=========================== */
 
-img{
-    max-width:100%;
-    display:block;
+#planning{
+
+    scrollbar-width:none;
 }
 
-/* ==========================
-   PETITES ANIMATIONS
-========================== */
+#planning::-webkit-scrollbar{
 
-section{
-    transition:
-        transform .20s ease,
-        box-shadow .20s ease;
+    display:none;
 }
 
-section:hover{
-    box-shadow:
-        0 10px 24px rgba(0,0,0,.15);
+/* ===========================
+   PETITS AJUSTEMENTS TV
+=========================== */
+
+#planning-header span,
+.planning-card span{
+
+    align-self:center;
 }
 
-/* ==========================
-   SMART TV
-========================== */
+#planning-header{
 
-@media screen and (min-width:1600px){
-    body{
-        font-size:18px;
-    }
-
+    align-items:center;
 }
 
-/* ==========================
+.planning-card{
+
+    align-items:center;
+}
+
+#photo-section,
+#planning-section{
+
+    height:100%;
+}
+
+/* ===========================
    FIN
-========================== */
+=========================== */
