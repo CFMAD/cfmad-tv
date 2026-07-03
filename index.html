@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CFMAD TV</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
-</head>
-
 <body>
-
-<!-- HEADER -->
 
 <header>
 
@@ -24,39 +8,47 @@
             <img src="logo.png" alt="CFMAD">
         </div>
 
-        <div id="slogan">
-            <span class="blanc">Se former aujourd'hui,</span><br>
-            <span class="jaune">réussir demain</span>
+        <div class="brand">
+
+            <div id="slogan">
+
+                <span class="blanc">
+                    Se former aujourd'hui,
+                </span>
+
+                <span class="jaune">
+                    réussir demain
+                </span>
+
+            </div>
+
         </div>
 
     </div>
 
     <div class="header-right">
 
-        <div class="clock-icon">🕒</div>
-
-        <div id="heure">00:00</div>
+        <div id="heure">00:00:00</div>
 
         <div class="date-wrapper">
+
             <div id="jour">Lundi</div>
-            <div id="date">01 janvier 2025</div>
+
+            <div id="date">01/01/2026</div>
+
         </div>
 
     </div>
 
 </header>
 
-<!-- CONTENU PRINCIPAL -->
-
 <main>
 
-    <!-- PLANNING -->
+    <!-- COLONNE 1 -->
 
-<section id="planning-section">
+    <section id="planning-section">
 
-    <h2>Planning du jour</h2>
-
-    <div id="planning">
+        <h2>Planning du jour</h2>
 
         <div id="planning-header">
 
@@ -68,23 +60,26 @@
 
         </div>
 
-    </div>
+        <div id="planning">
 
-</section>
+        </div>
 
-    <!-- PHOTO -->
+    </section>
+
+    <!-- COLONNE 2 -->
 
     <section id="photo-section">
 
-        <div id="photo-container">
+        <img
+            id="photo-principale"
+            src=""
+            alt="Photo">
 
-            <img id="photo-principale" src="" alt="Photo">
+        <div id="photo-overlay">
 
-            <div id="photo-overlay">
+            <div id="photo-message">
 
-                <div id="photo-message">
-                    Bienvenue au CFMAD
-                </div>
+                Bienvenue au CFMAD
 
             </div>
 
@@ -92,58 +87,68 @@
 
     </section>
 
-    <!-- COLONNE DROITE -->
+    <!-- COLONNE 3 -->
 
-    <section id="right-column">
+    <div id="right-column">
 
-        <div id="urgent-card">
+        <section id="urgent-card">
 
             <h3>Information importante</h3>
 
             <div id="urgent">
-                Aucun message
+
+                Chargement...
+
             </div>
 
-        </div>
+        </section>
 
-        <div id="citation-card">
+        <section id="citation-card">
 
             <h3>Citation du jour</h3>
 
             <div id="citation">
+
                 Chargement...
+
             </div>
 
-        </div>
+        </section>
 
-<div id="facebook-card">
+        <section id="facebook-card">
 
-    <h3>Facebook</h3>
-    <div id="facebook-link">
-        <img src="QR.png" alt="QR Code Facebook" id="facebook-qr">
+            <h3>Facebook</h3>
+
+            <div id="facebook-link">
+
+                <img
+                    id="facebook-qr"
+                    src="QR.png"
+                    alt="QR Facebook">
+
+            </div>
+
+        </section>
+
     </div>
 
-</div>
-
-    </section>
-
 </main>
-
-<!-- VITRINE -->
 
 <section id="vitrine-section">
 
     <div id="vitrine">
 
+        <!-- Généré par JS -->
+
     </div>
 
 </section>
 
-<!-- BANDEAU BAS -->
-
 <footer>
 
     <div id="bandeau">
+
+        Chargement...
 
     </div>
 
@@ -154,3 +159,4 @@
 </body>
 
 </html>
+
