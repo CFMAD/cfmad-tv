@@ -43,14 +43,14 @@ async function chargerDonnees() {
         // planning
         const planning = document.getElementById("planning");
         
-        planning.innerHTML = `
-<div id="planning-header">
+    // retirer    planning.innerHTML = `
+// retirer<div id="planning-header">
 
-    <span>Horaire</span>
-    <span>Classe</span>
-    <span>Formation</span>
-    <span>Salle</span>
-    <span>Formateur</span>
+ // retirer   <span>Horaire</span>
+// retirer    <span>Classe</span>
+ // retirer   <span>Formation</span>
+ // retirer   <span>Salle</span>
+// retirer    <span>Formateur</span>
 
 </div>
 `;
