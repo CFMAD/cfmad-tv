@@ -153,9 +153,9 @@ main{
 
     width:100%;
 
-    height:calc(100vh - 255px);
+    height:calc(100vh - 285px);
 
-    padding:18px;
+    padding:10px;
 
     display:grid;
 
@@ -293,11 +293,11 @@ section h3{
 
     border-radius:10px;
 
-    padding:8px 10px;
+    padding:6px 8px;
 
     margin-bottom:6px;
 
-    min-height:46px;
+    min-height:38px;
 
     box-shadow:
         0 2px 6px rgba(0,0,0,.05);
@@ -376,6 +376,8 @@ section h3{
     overflow:hidden;
 
     border-radius:18px;
+
+    max-height:430px;
 }
 
 #photo-container{
@@ -427,6 +429,8 @@ section h3{
     text-shadow:
         0 2px 6px rgba(0,0,0,.45);
 }
+
+   
 
 
 
@@ -482,7 +486,7 @@ section h3{
 
     background:#E61E25;
 
-    height:170px;
+    height:145px;
 }
 
 #urgent-card h3{
@@ -502,7 +506,7 @@ section h3{
 
     color:white;
 
-    font-size:18px;
+    font-size:16px;
 
     font-weight:600;
 
@@ -519,7 +523,7 @@ section h3{
 
 #citation-card{
 
-    height:180px;
+    height:150px;
 }
 
 #citation-card h3{
@@ -543,7 +547,7 @@ section h3{
 
     color:#333;
 
-    font-size:18px;
+    font-size:16px;
 
     line-height:1.45;
 
@@ -556,7 +560,7 @@ section h3{
 
 #facebook-card{
 
-    height:170px;
+    height:145px;
 
     display:flex;
 
@@ -591,9 +595,9 @@ section h3{
 
 #facebook-qr{
 
-    width:125px;
+    width:90px;
 
-    height:125px;
+    height:90px;
 
     object-fit:contain;
 
