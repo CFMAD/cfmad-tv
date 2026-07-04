@@ -1,6 +1,7 @@
 /* ======================================================
    SERFAM TV
-   Version 1.0
+   VERSION SMART TV V2
+   Partie 1 : Base + Header + Structure
 ====================================================== */
 
 *{
@@ -16,7 +17,15 @@
     --beige:#FFF8F2;
     --gris:#F3F5F7;
     --texte:#21404A;
-    --ombre:0 6px 18px rgba(0,0,0,.12);
+    --ombre:0 4px 12px rgba(0,0,0,.10);
+
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
 
 }
 
@@ -26,7 +35,6 @@ body{
     background:var(--gris);
     color:var(--texte);
 
-    height:100vh;
     overflow:hidden;
 
 }
@@ -37,7 +45,8 @@ HEADER
 
 header{
 
-    height:110px;
+    width:100%;
+    height:105px;
 
     background:var(--vert);
 
@@ -45,7 +54,7 @@ header{
     justify-content:space-between;
     align-items:center;
 
-    padding:0 30px;
+    padding:0 25px;
 
     color:white;
 
@@ -56,14 +65,16 @@ header{
     display:flex;
     align-items:center;
 
-    gap:25px;
+    gap:22px;
 
 }
 
 #logo{
 
-    height:85px;
+    height:78px;
     width:auto;
+
+    display:block;
 
 }
 
@@ -71,9 +82,9 @@ header{
 
     font-family:'Caveat',cursive;
 
-    font-size:34px;
+    font-size:30px;
 
-    line-height:1;
+    line-height:.95;
 
 }
 
@@ -81,7 +92,7 @@ header{
 
     color:#FFE3A3;
 
-    font-size:42px;
+    font-size:40px;
 
 }
 
@@ -96,8 +107,7 @@ header{
 
 #heure{
 
-    font-size:46px;
-
+    font-size:52px;
     font-weight:700;
 
 }
@@ -112,12 +122,14 @@ header{
 #jour{
 
     font-size:20px;
+    font-weight:600;
 
 }
 
 #date{
 
     font-size:18px;
+    font-weight:700;
 
     color:#DDEEEB;
 
@@ -129,15 +141,19 @@ MAIN
 
 main{
 
+    width:100%;
+
+    height:510px;
+
+    padding:14px;
+
     display:grid;
 
-    grid-template-columns:65% 35%;
+    grid-template-columns:
+        63%
+        37%;
 
-    gap:20px;
-
-    padding:20px;
-
-    height:calc(100vh - 320px);
+    gap:18px;
 
 }
 
@@ -149,7 +165,7 @@ section{
 
     background:white;
 
-    border-radius:22px;
+    border-radius:18px;
 
     overflow:hidden;
 
@@ -157,23 +173,49 @@ section{
 
 }
 
-/* ======================================================
-PHOTO
-====================================================== */
+
+
+
+
+/* ==========================================================
+   SERFAM TV
+   Partie 2 : Photo + Réunions
+========================================================== */
+
+/* ===========================
+   CONTENU PRINCIPAL
+=========================== */
+
+#photo-section,
+#reunions-section{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
+}
+
+/* ===========================
+   PHOTO
+=========================== */
 
 #photo-section{
 
     position:relative;
 
+    overflow:hidden;
+
+    height:100%;
 }
 
 #photo-principale{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
 
+    display:block;
 }
 
 #photo-overlay{
@@ -181,31 +223,34 @@ PHOTO
     position:absolute;
 
     left:0;
+
     right:0;
+
     bottom:0;
 
-    padding:25px;
+    padding:18px;
 
     background:linear-gradient(
-        transparent,
-        rgba(0,0,0,.75)
+        to top,
+        rgba(0,0,0,.70),
+        rgba(0,0,0,0)
     );
-
 }
 
 #photo-message{
 
     color:white;
 
-    font-size:34px;
+    font-size:30px;
 
     font-weight:700;
 
+    text-shadow:0 2px 6px rgba(0,0,0,.45);
 }
 
-/* ======================================================
-REUNIONS
-====================================================== */
+/* ===========================
+   REUNIONS
+=========================== */
 
 #reunions-section{
 
@@ -213,99 +258,184 @@ REUNIONS
 
     flex-direction:column;
 
-}
-
-#reunions-section h2{
-
-    background:var(--orange);
-
-    color:white;
-
-    padding:16px;
-
-    text-align:center;
-
-    font-size:24px;
-
+    height:100%;
 }
 
 #reunions{
 
     flex:1;
 
+    padding:12px;
+
     overflow:hidden;
-
-    padding:20px;
-
 }
 
-/* ======================================================
-INFOS
-====================================================== */
+/* ===========================
+   CARTE REUNION
+=========================== */
+
+.reunion-card{
+
+    background:#F5F8FA;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
+
+.reunion-horaire{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0D4A5B;
+
+    margin-bottom:6px;
+}
+
+.reunion-titre{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#17374D;
+
+    margin-bottom:6px;
+}
+
+.reunion-lieu{
+
+    font-size:16px;
+
+    color:#666;
+}
+
+
+/* ==========================================================
+   SERFAM TV
+   Partie 3 : Infos
+========================================================== */
+
+/* ===========================
+   BANDEAU INFOS
+=========================== */
 
 #infos{
 
+    width:calc(100% - 24px);
+
+    margin:12px;
+
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        1fr
+        1fr
+        0.9fr
+        0.9fr;
 
-    gap:18px;
-
-    margin:0 20px;
-
-    background:transparent;
-
-    box-shadow:none;
-
+    gap:12px;
 }
 
-#infos>div{
+/* ===========================
+   CARTES
+=========================== */
+
+#urgent-card,
+#citation-card,
+#facebook-card,
+#contact-card{
 
     background:white;
 
-    border-radius:20px;
-
-    box-shadow:var(--ombre);
+    border-radius:18px;
 
     overflow:hidden;
 
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.10);
 }
 
-#infos h3{
+#urgent-card h3,
+#citation-card h3,
+#facebook-card h3,
+#contact-card h3{
 
-    background:var(--vert);
+    padding:12px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:700;
+}
+
+/* ===========================
+   URGENT
+=========================== */
+
+#urgent-card{
+
+    background:#E61E25;
+}
+
+#urgent-card h3{
+
+    background:transparent;
+
+    color:white;
+}
+
+#urgent{
 
     color:white;
 
     text-align:center;
 
-    padding:14px;
-
-    font-size:20px;
-
-}
-
-#urgent{
-
-    padding:18px;
-
-    text-align:center;
-
     font-size:18px;
 
+    font-weight:600;
+
+    line-height:1.4;
+
+    padding:12px 16px 18px;
+}
+
+/* ===========================
+   CITATION
+=========================== */
+
+#citation-card h3{
+
+    background:white;
+
+    color:#7FB21A;
 }
 
 #citation{
 
-    padding:18px;
+    padding:15px;
 
     text-align:center;
 
+    font-size:17px;
+
+    color:#333;
+
+    line-height:1.45;
+
     font-style:italic;
-
-    line-height:1.5;
-
 }
+
+/* ===========================
+   FACEBOOK
+=========================== */
 
 #facebook-card{
 
@@ -313,14 +443,40 @@ INFOS
 
     flex-direction:column;
 
+    align-items:center;
+}
+
+#facebook-card h3{
+
+    background:#1877F2;
+
+    color:white;
+
+    width:100%;
 }
 
 #facebook-qr{
 
     width:120px;
 
-    margin:auto;
+    height:120px;
 
+    object-fit:contain;
+
+    margin:14px auto;
+
+    display:block;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+#contact-card h3{
+
+    background:#0D4A5B;
+
+    color:white;
 }
 
 #contact{
@@ -329,28 +485,52 @@ INFOS
 
     text-align:center;
 
-    line-height:1.8;
+    font-size:18px;
 
+    line-height:1.7;
+
+    color:#17374D;
 }
 
-/* ======================================================
-VITRINE
-====================================================== */
+
+
+
+
+
+/* ==========================================================
+   SERFAM TV
+   Partie 4 : Vitrine + Footer + Finitions
+========================================================== */
+
+/* ===========================
+   VITRINE
+=========================== */
 
 #vitrine-section{
 
-    margin:20px;
+    width:calc(100% - 24px);
 
-    height:90px;
+    margin:12px;
 
+    height:70px;
 }
 
 #vitrine{
 
-    display:flex;
+    width:100%;
 
     height:100%;
 
+    display:flex;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.10);
 }
 
 #vitrine div{
@@ -365,25 +545,53 @@ VITRINE
 
     align-items:center;
 
-    border-right:1px solid #ddd;
+    text-align:center;
 
+    padding:8px 12px;
+
+    border-right:1px solid #E2E2E2;
 }
 
 #vitrine div:last-child{
 
     border-right:none;
-
 }
 
-/* ======================================================
-FOOTER
-====================================================== */
+#vitrine h3{
+
+    background:transparent;
+
+    color:#0D4A5B;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    padding:0;
+
+    margin-bottom:4px;
+}
+
+#vitrine p{
+
+    color:#555;
+
+    font-size:13px;
+
+    line-height:1.2;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
 
-    height:65px;
+    width:100%;
 
-    background:var(--orange);
+    height:48px;
+
+    background:#7AA73D;
 
     color:white;
 
@@ -391,463 +599,103 @@ footer{
 
     align-items:center;
 
-    padding:0 30px;
+    padding:0 20px;
 
-    font-size:22px;
-
-    font-weight:600;
-
+    overflow:hidden;
 }
 
 #bandeau{
 
     width:100%;
 
-}
-
-
-
-/* ======================================================
-   CARTES REUNIONS
-====================================================== */
-
-.reunion-card{
-
-    background:white;
-    border-left:8px solid var(--orange);
-
-    border-radius:18px;
-
-    padding:18px;
-
-    margin-bottom:18px;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.reunion-card:hover{
-
-    transform:translateX(6px);
-
-}
-
-.reunion-horaire{
-
-    font-size:28px;
+    font-size:18px;
 
     font-weight:700;
-
-    color:var(--vert);
-
-}
-
-.reunion-titre{
-
-    margin-top:10px;
-
-    font-size:22px;
-
-    font-weight:600;
-
-    color:var(--texte);
-
-}
-
-.reunion-lieu{
-
-    margin-top:8px;
-
-    font-size:18px;
-
-    color:#666;
-
-}
-
-/* ======================================================
-URGENT
-====================================================== */
-
-#urgent-card{
-
-    background:#D62828;
-
-}
-
-#urgent-card h3{
-
-    background:transparent;
-
-    font-size:22px;
-
-}
-
-#urgent{
-
-    color:white;
-
-    font-weight:600;
-
-    line-height:1.6;
-
-}
-
-/* ======================================================
-CITATION
-====================================================== */
-
-#citation-card h3{
-
-    background:white;
-
-    color:var(--vert);
-
-}
-
-#citation{
-
-    font-size:20px;
-
-    color:#444;
-
-}
-
-/* ======================================================
-FACEBOOK
-====================================================== */
-
-#facebook-card h3{
-
-    background:#1877F2;
-
-}
-
-#facebook-qr{
-
-    width:150px;
-
-    height:150px;
-
-    object-fit:contain;
-
-}
-
-/* ======================================================
-CONTACT
-====================================================== */
-
-#contact-card h3{
-
-    background:var(--orange);
-
-}
-
-#contact{
-
-    font-size:20px;
-
-    font-weight:500;
-
-}
-
-/* ======================================================
-VITRINE
-====================================================== */
-
-#vitrine div{
-
-    transition:.35s;
-
-}
-
-#vitrine div:hover{
-
-    background:#FFF7EC;
-
-}
-
-#vitrine h3{
-
-    color:var(--vert);
-
-    font-size:22px;
-
-    margin-bottom:6px;
-
-}
-
-#vitrine p{
-
-    font-size:18px;
-
-    color:#555;
-
-    text-align:center;
-
-}
-
-/* ======================================================
-BANDEAU
-====================================================== */
-
-#bandeau{
 
     white-space:nowrap;
 
     overflow:hidden;
 
-    position:relative;
-
+    text-overflow:ellipsis;
 }
 
-#bandeau::after{
+/* ===========================
+   IMAGES
+=========================== */
 
-    content:"";
+img{
 
-    display:inline-block;
+    display:block;
 
-    width:100%;
-
+    max-width:100%;
 }
 
-.bandeau-texte{
+/* ===========================
+   LIENS
+=========================== */
 
-    display:inline-block;
+a{
 
-    padding-left:100%;
+    color:inherit;
 
-    animation:defilement 45s linear infinite;
-
+    text-decoration:none;
 }
 
-@keyframes defilement{
+/* ===========================
+   SCROLLBAR
+=========================== */
 
-    from{
+#reunions{
 
-        transform:translateX(0);
-
-    }
-
-    to{
-
-        transform:translateX(-100%);
-
-    }
-
+    scrollbar-width:none;
 }
 
-/* ======================================================
-PHOTO
-====================================================== */
+#reunions::-webkit-scrollbar{
 
-#photo-principale{
+    display:none;
+}
 
-    transition:opacity 1s ease-in-out;
+/* ===========================
+   ANIMATIONS DIAPORAMA
+=========================== */
 
+.fade-in{
+
+    opacity:1;
+
+    transition:opacity .8s;
 }
 
 .fade-out{
 
     opacity:0;
 
+    transition:opacity .8s;
 }
 
-.fade-in{
+/* ===========================
+   AJUSTEMENTS SMART TV
+=========================== */
 
-    opacity:1;
+main{
 
+    margin-bottom:10px;
 }
 
-/* ======================================================
-ANIMATIONS
-====================================================== */
+#infos{
 
-@keyframes apparition{
+    margin-top:8px;
 
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
+    margin-bottom:10px;
 }
 
-.reunion-card,
-#infos > div,
-#photo-section{
+#vitrine-section{
 
-    animation:apparition .7s ease;
-
-}
-
-/* ======================================================
-SCROLLBAR
-====================================================== */
-
-#reunions{
-
-    scrollbar-width:none;
-
-}
-
-#reunions::-webkit-scrollbar{
-
-    display:none;
-
-}
-
-
-/* ======================================================
-   FINITIONS
-====================================================== */
-
-/* Logo */
-
-#logo{
-
-    display:block;
-
-    object-fit:contain;
-
-}
-
-/* Photo */
-
-#photo-container{
-
-    width:100%;
-    height:100%;
-    position:relative;
-    overflow:hidden;
-
-}
-
-#photo-principale{
-
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
-}
-
-/* Overlay */
-
-#photo-overlay{
-
-    z-index:5;
-
-}
-
-#photo-message{
-
-    letter-spacing:.5px;
-
-}
-
-/* Réunions */
-
-#reunions{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:16px;
-
-}
-
-/* Cartes infos */
-
-#infos>div{
-
-    min-height:180px;
-
-}
-
-/* Contact */
-
-#contact{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    height:100%;
-
-}
-
-/* Vitrine */
-
-#vitrine{
-
-    background:white;
-
-}
-
-#vitrine div{
-
-    padding:10px;
-
-}
-
-#vitrine h3{
+    margin-top:8px;
 
     margin-bottom:8px;
-
-    color:var(--vert);
-
 }
 
-#vitrine p{
-
-    color:#666;
-
-}
-
-/* Footer */
-
-footer{
-
-    letter-spacing:.5px;
-
-}
-
-/* Animation photo */
-
-#photo-principale{
-
-    opacity:1;
-
-    transition:opacity 1s ease;
-
-}
-
-/* Animation générale */
-
-section{
-
-    transition:.35s;
-
-}
-
-/* Responsive Full HD */
-
-body{
-
-    min-width:1600px;
-
-}
+/* ===========================
+   FIN
+=========================== */
