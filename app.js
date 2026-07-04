@@ -52,8 +52,8 @@ async function chargerDonnees() {
  // retirer   <span>Salle</span>
 // retirer    <span>Formateur</span> 
 
-</div>
-`;
+// retirer</div>
+// retirer`;
 console.log(planning.innerHTML);
         if (Array.isArray(data.planning)) {
 
