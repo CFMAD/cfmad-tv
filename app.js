@@ -50,7 +50,7 @@ async function chargerDonnees() {
 // retirer    <span>Classe</span>
  // retirer   <span>Formation</span>
  // retirer   <span>Salle</span>
-// retirer    <span>Formateur</span>
+// retirer    <span>Formateur</span> 
 
 </div>
 `;
