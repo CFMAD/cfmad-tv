@@ -41,19 +41,9 @@ async function chargerDonnees() {
         }
 
         // planning
-        const planning = document.getElementById("planning");
-        
-    // retirer    planning.innerHTML = `
-// retirer<div id="planning-header">
+const planning = document.getElementById("planning");
+planning.innerHTML = "";
 
- // retirer   <span>Horaire</span>
-// retirer    <span>Classe</span>
- // retirer   <span>Formation</span>
- // retirer   <span>Salle</span>
-// retirer    <span>Formateur</span> 
-
-// retirer</div>
-// retirer`;
 console.log(planning.innerHTML);
         if (Array.isArray(data.planning)) {
 
