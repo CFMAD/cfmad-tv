@@ -23,6 +23,7 @@ HORLOGE
 function mettreAJourHorloge() {
 
     const maintenant = new Date();
+maintenant.setHours(maintenant.getHours() + 1);
 
     document.getElementById("heure").textContent =
         maintenant.toLocaleTimeString("fr-FR");
@@ -135,15 +136,19 @@ function photoSuivante(){
 
         }
 
-        image.src=photos[photoCourante];
+image.onload = () => {
 
-        image.classList.remove("fade-out");
+    image.classList.remove("fade-out");
 
-        image.classList.add("fade-in");
+    image.classList.add("fade-in");
+
+    setTimeout(()=>{
+
+        image.classList.remove("fade-in");
 
     },1000);
 
-}
+};
 
 
 /* ==========================================================
