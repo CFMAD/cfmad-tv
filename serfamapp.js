@@ -1,13 +1,20 @@
 /* ==========================================================
    SERFAM TV
    Partie 1
-   Horloge - Google Sheets - Diaporama
+   Configuration + Horloge + Chargement
 ========================================================== */
-console.log("SERFAM APP CHARGE");
 
+console.log("SERFAM TV démarré");
+
+/* ==========================================================
+   CONFIGURATION
+========================================================== */
 
 const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnTX635-HGOZAyuYBNOgIU5rL4l_SM-BLmgEWovaMJLqPw0a9ksL0ZN40SkBBdXO7UBd4gc7kKYfmHl99TWp0c-n1IM9lTSSVVV9FpbESVVAgUO8pfMuJxRaGWXacSAHnjvf7GMtYejBDo0sXgaaaV-XY6Ajew7mLFEmhUBztuc-bqQkR3iFkcDrgbAdG4cUwc8yWUYIxHPcB9H79Wa2XY-wHkydjGxO2Nlqz4o93C-ZA_hKRREXc4Qg46I5qts7cHzorFZM_gSQkln3w0ykujdIW8O3cA&lib=M5k8RhdxgLMqvnc5xtfdZ_hrz-EcdL9gh";
 
+// false = PC
+// true = Smart TV Hisense
+const MODE_TV = false;
 
 let donnees = {};
 
@@ -17,23 +24,33 @@ let photoCourante = 0;
 
 
 /* ==========================================================
-HORLOGE
+   HORLOGE
 ========================================================== */
 
-function mettreAJourHorloge() {
+function mettreAJourHorloge(){
 
     const maintenant = new Date();
-maintenant.setHours(maintenant.getHours() + 1);
+
+    if(MODE_TV){
+
+        maintenant.setHours(
+            maintenant.getHours()+1
+        );
+
+    }
 
     document.getElementById("heure").textContent =
         maintenant.toLocaleTimeString("fr-FR");
 
-    const jour = maintenant.toLocaleDateString("fr-FR",{
-        weekday:"long"
-    });
+    const jour =
+        maintenant.toLocaleDateString("fr-FR",{
+
+            weekday:"long"
+
+        });
 
     document.getElementById("jour").textContent =
-        jour.charAt(0).toUpperCase() + jour.slice(1);
+        jour.charAt(0).toUpperCase()+jour.slice(1);
 
     document.getElementById("date").textContent =
         maintenant.toLocaleDateString("fr-FR",{
@@ -48,7 +65,7 @@ maintenant.setHours(maintenant.getHours() + 1);
 
 
 /* ==========================================================
-CHARGEMENT GOOGLE SHEETS
+   GOOGLE SHEETS
 ========================================================== */
 
 async function chargerDonnees(){
@@ -59,15 +76,15 @@ async function chargerDonnees(){
 
         donnees = await response.json();
 
-        console.log("SERFAM",donnees);
+        console.log(donnees);
 
-        initialiserDonnees();
+        initialiserPage();
 
     }
 
-    catch(e){
+    catch(erreur){
 
-        console.error(e);
+        console.error(erreur);
 
     }
 
@@ -75,37 +92,58 @@ async function chargerDonnees(){
 
 
 /* ==========================================================
-INITIALISATION
+   INITIALISATION
 ========================================================== */
 
-function initialiserDonnees(){
+function initialiserPage(){
 
     chargerUrgent();
 
     chargerCitation();
 
+    chargerPhotos();
+
+    chargerReunions();
+
     chargerVitrine();
 
     chargerBandeau();
 
-    chargerReunions();
-
-    chargerPhotos();
-
 }
 
 
+
+
+
+
+
 /* ==========================================================
-PHOTOS
+   SERFAM TV
+   Partie 2
+   Photos + Diaporama + Réunions
+========================================================== */
+
+/* ==========================================================
+   PHOTOS
 ========================================================== */
 
 function chargerPhotos(){
 
-    if(!donnees.photosSerfam) return;
+    photos = [];
 
-    photos = donnees.photosSerfam;
+    if(Array.isArray(donnees.photosSerfam)){
 
-    if(photos.length===0) return;
+        photos = donnees.photosSerfam;
+
+    }
+
+    if(photos.length===0){
+
+        return;
+
+    }
+
+    photoCourante = 0;
 
     document.getElementById("photo-principale").src =
         photos[0];
@@ -114,12 +152,24 @@ function chargerPhotos(){
 
 
 /* ==========================================================
-DIAPORAMA
+   DIAPORAMA
 ========================================================== */
 
 function photoSuivante(){
 
-    if(photos.length<=1) return;
+    if(photos.length<=1){
+
+        return;
+
+    }
+
+    photoCourante++;
+
+    if(photoCourante>=photos.length){
+
+        photoCourante=0;
+
+    }
 
     const image =
         document.getElementById("photo-principale");
@@ -128,55 +178,21 @@ function photoSuivante(){
 
     setTimeout(()=>{
 
-        photoCourante++;
+        image.src = photos[photoCourante];
 
-        if(photoCourante>=photos.length){
+        image.classList.remove("fade-out");
 
-            photoCourante=0;
+        image.classList.add("fade-in");
 
-        }
+        setTimeout(()=>{
 
-image.onload = () => {
+            image.classList.remove("fade-in");
 
-    image.classList.remove("fade-out");
+        },800);
 
-    image.classList.add("fade-in");
+    },500);
 
-    setTimeout(()=>{
-
-        image.classList.remove("fade-in");
-
-    },1000);
-
-};
-
-
-/* ==========================================================
-LANCEMENT HORLOGE
-========================================================== */
-
-mettreAJourHorloge();
-
-setInterval(
-
-    mettreAJourHorloge,
-
-    1000
-
-);
-
-
-/* ==========================================================
-LANCEMENT DIAPORAMA
-========================================================== */
-
-setInterval(
-
-    photoSuivante,
-
-    15000
-
-);
+}
 
 
 /* ==========================================================
@@ -185,17 +201,27 @@ setInterval(
 
 function chargerReunions(){
 
-    const conteneur = document.getElementById("reunions");
+    const conteneur =
+        document.getElementById("reunions");
 
-    if(!conteneur) return;
+    if(!conteneur){
 
-    conteneur.innerHTML = "";
+        return;
 
-    if(!Array.isArray(donnees.reunionsSerfam)) return;
+    }
+
+    conteneur.innerHTML="";
+
+    if(!Array.isArray(donnees.reunionsSerfam)){
+
+        return;
+
+    }
 
     donnees.reunionsSerfam.forEach(reunion=>{
 
-        const carte = document.createElement("div");
+        const carte =
+            document.createElement("div");
 
         carte.className="reunion-card";
 
@@ -203,7 +229,7 @@ function chargerReunions(){
 
             <div class="reunion-horaire">
 
-                🕘 ${reunion.debut} - ${reunion.fin}
+                ${reunion.debut} - ${reunion.fin}
 
             </div>
 
@@ -228,19 +254,32 @@ function chargerReunions(){
 }
 
 
+
+
+
 /* ==========================================================
-   MESSAGE URGENT
+   SERFAM TV
+   Partie 3
+   Urgent - Citation - Vitrine - Bandeau
+========================================================== */
+
+/* ==========================================================
+   MESSAGE IMPORTANT
 ========================================================== */
 
 function chargerUrgent(){
 
-    const zone=document.getElementById("urgent");
+    const zone =
+        document.getElementById("urgent");
 
-    if(!zone) return;
+    if(!zone){
 
-    zone.textContent=
+        return;
 
-        donnees.urgentSerfam || "Aucun message";
+    }
+
+    zone.textContent =
+        donnees.urgentSerfam || "";
 
 }
 
@@ -251,52 +290,133 @@ function chargerUrgent(){
 
 function chargerCitation(){
 
-    const zone=document.getElementById("citation");
+    const zone =
+        document.getElementById("citation");
 
-    if(!zone) return;
+    if(!zone){
 
-    zone.textContent=
+        return;
 
+    }
+
+    zone.textContent =
         donnees.citationSerfam || "";
+
+}
+
+
+/* ==========================================================
+   VITRINE
+========================================================== */
+
+function chargerVitrine(){
+
+    const vitrine =
+        document.getElementById("vitrine");
+
+    if(!vitrine){
+
+        return;
+
+    }
+
+    vitrine.innerHTML = "";
+
+    if(!Array.isArray(donnees.vitrineSerfam)){
+
+        return;
+
+    }
+
+    donnees.vitrineSerfam.forEach(bloc=>{
+
+        const div =
+            document.createElement("div");
+
+        div.innerHTML = `
+
+            <h3>${bloc.titre}</h3>
+
+            <p>${bloc.texte}</p>
+
+        `;
+
+        vitrine.appendChild(div);
+
+    });
+
+}
+
+
+/* ==========================================================
+   BANDEAU
+========================================================== */
+
+function chargerBandeau(){
+
+    const bandeau =
+        document.getElementById("bandeau");
+
+    if(!bandeau){
+
+        return;
+
+    }
+
+    if(Array.isArray(donnees.bandeauSerfam)){
+
+        bandeau.textContent =
+            donnees.bandeauSerfam.join("   ●   ");
+
+    }
+
+    else{
+
+        bandeau.textContent = "";
+
+    }
 
 }
 
 
 
 
-reunionsSerfam:[
 
-   {
+/* ==========================================================
+   SERFAM TV
+   Partie 4
+   Lancement de l'application
+========================================================== */
 
-      debut:"09:00",
+/* ==========================================================
+   DEMARRAGE
+========================================================== */
 
-      fin:"10:30",
+// Horloge
+mettreAJourHorloge();
+setInterval(mettreAJourHorloge,1000);
 
-      reunion:"Réunion équipe",
-
-      lieu:"Salle polyvalente"
-
-   },
-
-   {
-
-      debut:"14:00",
-
-      fin:"15:30",
-
-      reunion:"Accueil familles",
-
-      lieu:"Bureau 2"
-
-   }
-
-],
-
-urgentSerfam:"Le parking est fermé.",
-
-citationSerfam:"La famille est le premier lieu d'apprentissage."
-
-
+// Chargement initial
 chargerDonnees();
 
+// Rafraîchissement des données toutes les minutes
 setInterval(chargerDonnees,60000);
+
+// Diaporama
+setInterval(photoSuivante,15000);
+
+
+/* ==========================================================
+   SECURITE
+========================================================== */
+
+window.addEventListener("load",()=>{
+
+    console.log("SERFAM TV prêt");
+
+});
+
+
+/* ==========================================================
+   FIN
+========================================================== */
