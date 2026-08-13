@@ -13,40 +13,52 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- ===========================
-HEADER
-=========================== -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header>
 
     <div class="header-left">
 
-        <img src="serfam-logo.png" id="logo" alt="Serfam">
+        <div id="logo">
+            <img src="serfam-logo.png" alt="SERFAM">
+        </div>
 
-        <div id="accroche">
+        <div class="brand">
 
-            Soutenir les familles,<br>
-            <span>à chaque étape de la vie</span>
+            <div id="slogan">
+
+                <span class="blanc">
+                    Service familial de Charleroi
+                </span>
+
+                <span class="jaune">
+                    au service des familles et des aînés
+                </span>
+
+            </div>
 
         </div>
 
     </div>
 
+
     <div class="header-right">
 
-        <div id="heure">00:00</div>
+        <div id="heure">00:00:00</div>
 
         <div class="date-wrapper">
 
             <div id="jour">Lundi</div>
 
-            <div id="date">01/01/2025</div>
+            <div id="date">01/01/2026</div>
 
         </div>
 
@@ -54,122 +66,151 @@ HEADER
 
 </header>
 
-<!-- ===========================
-CONTENU
-=========================== -->
+
+<!-- ==================================================
+     CONTENU PRINCIPAL
+================================================== -->
 
 <main>
 
-    <!-- PHOTO -->
+
+    <!-- ==========================
+         COLONNE 1 : PLANNING
+    =========================== -->
+
+    <section id="planning-section">
+
+        <h2>Planning du jour</h2>
+
+        <div id="planning-header">
+
+            <span>Horaire</span>
+            <span>Formation</span>
+            <span>Salle</span>
+            <span>Formateur</span>
+
+        </div>
+
+        <div id="planning">
+
+            <!-- Généré par JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================
+         COLONNE 2 : PHOTO
+    =========================== -->
 
     <section id="photo-section">
 
-        <img id="photo-principale" src="" alt="Photo Serfam">
+        <img
+            id="photo-principale"
+            src=""
+            alt="SERFAM">
 
         <div id="photo-overlay">
 
             <div id="photo-message">
-
                 Bienvenue au SERFAM
-
             </div>
 
         </div>
 
     </section>
 
-    <!-- REUNIONS -->
 
-    <section id="reunions-section">
+    <!-- ==========================
+         COLONNE 3 : INFORMATIONS
+    =========================== -->
 
-        <h2>Réunions du jour</h2>
+    <div id="right-column">
 
-        <div id="reunions">
 
-            <!-- généré par JS -->
+        <!-- INFORMATION IMPORTANTE -->
 
-        </div>
+        <section id="urgent-card">
 
-    </section>
+            <h3>Information importante</h3>
+
+            <div id="urgent">
+
+                Chargement...
+
+            </div>
+
+        </section>
+
+
+        <!-- CITATION -->
+
+        <section id="citation-card">
+
+            <h3>Citation du jour</h3>
+
+            <div id="citation">
+
+                Chargement...
+
+            </div>
+
+        </section>
+
+
+        <!-- FACEBOOK -->
+
+        <section id="facebook-card">
+
+            <h3>Facebook</h3>
+
+            <div id="facebook-link">
+
+                <img
+                    id="facebook-qr"
+                    src="QR-serfam.png"
+                    alt="QR Facebook">
+
+            </div>
+
+        </section>
+
+
+    </div>
 
 </main>
 
-<!-- ===========================
-INFOS
-=========================== -->
 
-<section id="infos">
-
-    <div id="urgent-card">
-
-        <h3>Information importante</h3>
-
-        <div id="urgent">
-
-            Chargement...
-
-        </div>
-
-    </div>
-
-    <div id="citation-card">
-
-        <h3>Citation du jour</h3>
-
-        <div id="citation">
-
-            Chargement...
-
-        </div>
-
-    </div>
-
-    <div id="facebook-card">
-
-        <h3>Facebook</h3>
-
-        <img src="QR-serfam.png" id="facebook-qr">
-
-    </div>
-
-    <div id="contact-card">
-
-        <h3>Contact</h3>
-
-        <div id="contact">
-
-            📞 02 xxx xx xx<br>
-            ✉ info@serfam.be
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ===========================
-VITRINE
-=========================== -->
+<!-- ==================================================
+     VITRINE
+================================================== -->
 
 <section id="vitrine-section">
 
     <div id="vitrine">
 
+        <!-- Généré par JavaScript -->
+
     </div>
 
 </section>
 
-<!-- ===========================
-BANDEAU
-=========================== -->
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer>
 
     <div id="bandeau">
 
+        Chargement...
+
     </div>
 
 </footer>
+
 
 <script src="serfamapp.js"></script>
 
