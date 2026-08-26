@@ -10,8 +10,8 @@ console.log("SERFAM TV démarré");
    CONFIGURATION
 ========================================================== */
 
-const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnTX635-HGOZAyuYBNOgIU5rL4l_SM-BLmgEWovaMJLqPw0a9ksL0ZN40SkBBdXO7UBd4gc7kKYfmHl99TWp0c-n1IM9lTSSVVV9FpbESVVAgUO8pfMuJxRaGWXacSAHnjvf7GMtYejBDo0sXgaaaV-XY6Ajew7mLFEmhUBztuc-bqQkR3iFkcDrgbAdG4cUwc8yWUYIxHPcB9H79Wa2XY-wHkydjGxO2Nlqz4o93C-ZA_hKRREXc4Qg46I5qts7cHzorFZM_gSQkln3w0ykujdIW8O3cA&lib=M5k8RhdxgLMqvnc5xtfdZ_hrz-EcdL9gh";
-
+const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnSVuuA-puvl4RIgmcomKu0NEXT1h7eUQdfmbteDWFHHElk6Pz9zVVU7Yyr1cxPas2V7s94ZkkqFREZGg4MNbgJFPOFLo7cD8ZJqTiGnGvRXLmHIzJq5diFNr5M9fAx5_1QwGheK6PIxCgrlLaPaJciDj-MYAWuOVZN8F8Zj3dEpBOlTYYAEVUCdx1s3NeHWGj4TumaJd97uMdTSieC_xMwsoV_J1nhK9lTexNMc8wccaDZ-bMrvJVYpSL9kPiju3tsxSadR-L7UXRMsBgZAWQPggerYXg&lib=M5k8RhdxgLMqvnc5xtfdZ_hrz-EcdL9gh
+";
 
 /*
    false = ordinateur
