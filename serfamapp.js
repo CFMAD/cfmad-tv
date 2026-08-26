@@ -164,10 +164,9 @@ function initialiserPage(){
    PHOTO
 ========================================================== */
 
-function chargerPhotos(){
+async function chargerPhotos(){
 
     photos = [];
-
 
     if(
         Array.isArray(
@@ -175,15 +174,48 @@ function chargerPhotos(){
         )
     ){
 
-        photos =
+        const candidates =
             donnees.photosSerfam.filter(
                 photo => photo
             );
+
+        /* On teste chaque URL */
+        for(const url of candidates){
+
+            const imageTest =
+                new Image();
+
+            const valide =
+                await new Promise(
+                    resolve => {
+
+                        imageTest.onload =
+                            () => resolve(true);
+
+                        imageTest.onerror =
+                            () => resolve(false);
+
+                        imageTest.src = url;
+
+                    }
+                );
+
+            if(valide){
+
+                photos.push(url);
+
+            }
+
+        }
 
     }
 
 
     if(photos.length === 0){
+
+        console.warn(
+            "Aucune photo SERFAM valide."
+        );
 
         return;
 
@@ -192,11 +224,17 @@ function chargerPhotos(){
 
     photoCourante = 0;
 
-
     const image =
         document.getElementById(
             "photo-principale"
         );
+
+
+    if(!image){
+
+        return;
+
+    }
 
 
     image.src =
@@ -218,8 +256,20 @@ function photoSuivante(){
     }
 
 
-    photoCourante++;
+    const image =
+        document.getElementById(
+            "photo-principale"
+        );
 
+
+    if(!image){
+
+        return;
+
+    }
+
+
+    photoCourante++;
 
     if(
         photoCourante >= photos.length
@@ -230,10 +280,8 @@ function photoSuivante(){
     }
 
 
-    const image =
-        document.getElementById(
-            "photo-principale"
-        );
+    const prochainePhoto =
+        photos[photoCourante];
 
 
     image.classList.add(
@@ -241,35 +289,43 @@ function photoSuivante(){
     );
 
 
-    setTimeout(()=>{
+    setTimeout(
 
-        image.src =
-            photos[photoCourante];
+        () => {
 
-
-        image.classList.remove(
-            "fade-out"
-        );
-
-
-        image.classList.add(
-            "fade-in"
-        );
-
-
-        setTimeout(()=>{
+            image.src =
+                prochainePhoto;
 
             image.classList.remove(
+                "fade-out"
+            );
+
+            image.classList.add(
                 "fade-in"
             );
 
-        },800);
 
+            setTimeout(
 
-    },500);
+                () => {
+
+                    image.classList.remove(
+                        "fade-in"
+                    );
+
+                },
+
+                800
+
+            );
+
+        },
+
+        500
+
+    );
 
 }
-
 
 /* ==========================================================
    PLANNING / RÉUNIONS
