@@ -19,19 +19,14 @@ body{
 
 }
 
-
-body{
-
-    background:#E9EEF2;
-
-    font-family:"Segoe UI",Arial,sans-serif;
-
-    color:#17374D;
-
-    overflow:hidden;
-
+body {
+    background-color: #E9EEF2;
+    background-image: url("fond-ballons-serfam.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
 
 /* ==========================================================
    HEADER
