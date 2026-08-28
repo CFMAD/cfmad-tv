@@ -809,6 +809,21 @@ a{
 }
 
 
+/* TEST TRANSPARENCE VITRINE SERFAM */
+#vitrine {
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
+#vitrine > div {
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
+
+/* TEST TRANSPARENCE PHOTO SERFAM */
+#photo-principale {
+    opacity: 0.80;
+}
+
 /* ==========================================================
    FIN
 ========================================================== */
