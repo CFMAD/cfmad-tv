@@ -808,21 +808,50 @@ a{
 
 }
 
+/* ==========================================================
+   TRANSPARENCE – FOND BALLONS SERFAM
+========================================================== */
 
-/* TEST TRANSPARENCE VITRINE SERFAM */
+/* Planning du jour */
+#planning {
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Lignes du planning */
+#planning .planning-card {
+    background: rgba(245, 248, 250, 0.65) !important;
+}
+
+/* Photo centrale */
+#photo-principale {
+    opacity: 0.82;
+}
+
+/* Vitrine */
 #vitrine {
     background: rgba(255, 255, 255, 0.65) !important;
 }
 
+/* Les deux espaces Direction / Secrétariat */
 #vitrine > div {
     background: rgba(255, 255, 255, 0.65) !important;
 }
 
-
-/* TEST TRANSPARENCE PHOTO SERFAM */
-#photo-principale {
-    opacity: 0.80;
+/* Information importante */
+#urgent-card {
+    background: rgba(230, 30, 37, 0.88) !important;
 }
+
+/* Citation */
+#citation-card {
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Facebook */
+#facebook-card {
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
 
 /* ==========================================================
    FIN
