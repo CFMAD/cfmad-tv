@@ -814,42 +814,42 @@ a{
 
 /* Planning du jour */
 #planning {
-    background: rgba(255, 255, 255, 0.65) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
 }
 
 /* Lignes du planning */
 #planning .planning-card {
-    background: rgba(245, 248, 250, 0.65) !important;
+    background: rgba(245, 248, 250, 0.55) !important;
 }
 
 /* Photo centrale */
 #photo-principale {
-    opacity: 0.82;
+    opacity: 0.78;
 }
 
 /* Vitrine */
 #vitrine {
-    background: rgba(255, 255, 255, 0.65) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
 }
 
 /* Les deux espaces Direction / Secrétariat */
 #vitrine > div {
-    background: rgba(255, 255, 255, 0.65) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
 }
 
 /* Information importante */
 #urgent-card {
-    background: rgba(230, 30, 37, 0.88) !important;
+    background: rgba(230, 30, 37, 0.82) !important;
 }
 
 /* Citation */
 #citation-card {
-    background: rgba(255, 255, 255, 0.65) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
 }
 
 /* Facebook */
 #facebook-card {
-    background: rgba(255, 255, 255, 0.65) !important;
+    background: rgba(255, 255, 255, 0.55) !important;
 }
 
 
