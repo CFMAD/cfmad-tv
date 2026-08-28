@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accueil – CFMAD / SERFAM</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .ecran {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #cfmad {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        #serfam {
+            opacity: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE CFMAD -->
+    <iframe
+        id="cfmad"
+        class="ecran"
+        src="index.html"
+        title="Écran CFMAD">
+    </iframe>
+
+    <!-- PAGE SERFAM -->
+    <iframe
+        id="serfam"
+        class="ecran"
+        src="serfam.html"
+        title="Écran SERFAM">
+    </iframe>
+
+
+    <script>
+        const cfmad = document.getElementById("cfmad");
+        const serfam = document.getElementById("serfam");
+
+        let affichageCFMAD = true;
+
+        setInterval(() => {
+
+            if (affichageCFMAD) {
+
+                // CFMAD → SERFAM
+                cfmad.style.opacity = "0";
+                serfam.style.opacity = "1";
+
+                cfmad.style.zIndex = "1";
+                serfam.style.zIndex = "2";
+
+            } else {
+
+                // SERFAM → CFMAD
+                serfam.style.opacity = "0";
+                cfmad.style.opacity = "1";
+
+                serfam.style.zIndex = "1";
+                cfmad.style.zIndex = "2";
+            }
+
+            affichageCFMAD = !affichageCFMAD;
+
+        }, 15000);
+    </script>
+
+</body>
+</html>
