@@ -313,8 +313,9 @@ section h3{
 
     align-items:center;
 
-    background:#F7F4F6;
-
+   /* - background:#F7F4F6;- */
+   
+   background:rgba(245,248,250,0.88);
     border-radius:10px;
 
     padding:6px 8px;
@@ -488,14 +489,9 @@ section h3{
 #facebook-card{
 
     border-radius:18px;
-
     overflow:hidden;
-
-    background:white;
-
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.10);
-
+    background:rgba(255,255,255,0.88);
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
 }
 
 
@@ -549,7 +545,7 @@ section h3{
 ========================================================== */
 
 #citation-card{
-
+background:rgba(255,255,255,0.88);
     height:150px;
 
 }
@@ -557,7 +553,7 @@ section h3{
 
 #citation-card h3{
 
-    background:white;
+    background:rgba(255,255,255,0.88);
 
     color:#8A7A20;
 
