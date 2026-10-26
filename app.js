@@ -136,16 +136,22 @@ ligne.innerHTML = `
 function mettreAJourHorloge() {
 
     const maintenant = new Date();
-// Correction Smart TV (+1 heure)
-maintenant.setHours(maintenant.getHours() + 1);
-    
-    const heure = maintenant.toLocaleTimeString("fr-FR");
 
-    const jour = maintenant.toLocaleDateString("fr-FR", {
+    const heure = maintenant.toLocaleTimeString("fr-BE", {
+        timeZone: "Europe/Brussels",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+    });
+
+    const jour = maintenant.toLocaleDateString("fr-BE", {
+        timeZone: "Europe/Brussels",
         weekday: "long"
     });
 
-    const date = maintenant.toLocaleDateString("fr-FR", {
+    const date = maintenant.toLocaleDateString("fr-BE", {
+        timeZone: "Europe/Brussels",
         day: "2-digit",
         month: "2-digit",
         year: "numeric"
@@ -162,5 +168,3 @@ maintenant.setHours(maintenant.getHours() + 1);
 mettreAJourHorloge();
 setInterval(mettreAJourHorloge, 1000);
 
-chargerDonnees();
-setInterval(chargerDonnees, 60000);
