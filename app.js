@@ -168,3 +168,5 @@ function mettreAJourHorloge() {
 mettreAJourHorloge();
 setInterval(mettreAJourHorloge, 1000);
 
+chargerDonnees();
+setInterval(chargerDonnees, 60000);
